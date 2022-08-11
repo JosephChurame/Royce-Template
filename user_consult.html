@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consult Users</title>
+  <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
+  <link rel="stylesheet" href="node_modules/bulma-extensions/bulma-divider/dist/css/bulma-divider.min.css">
+  <link rel="stylesheet" href="node_modules/bulma-extensions/bulma-tagsinput/dist/css/bulma-tagsinput.min.css">
+  <link rel="stylesheet" href="node_modules/bulma-extensions/bulma-checkradio/dist/css/bulma-checkradio.min.css">
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.css">
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/brands.css">
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/solid.css">
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/regular.css">
+
+  <style>
+    #tabs-with-content .tabs:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    #tabs-with-content .tab-content {
+      padding: 1rem;
+      display: none;
+    }
+
+    #tabs-with-content .tab-content.is-active {
+      display: block;
+    }
+  </style>
+
+  <script src="node_modules/bulma-extensions/bulma-tagsinput/dist/js/bulma-tagsinput.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container my-6">
+
+    <h2 class="title is-2">Search User</h2>
+    <article class="message is-info">
+      <div class="message-header">
+        <p>Info</p>
+        <button class="delete" aria-label="delete"></button>
+      </div>
+      <div class="message-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+      </div>
+    </article>
+
+    <div id="tabs-with-content">
+      <div class="tabs is-centered">
+        <ul>
+          <ul>
+            <li class="is-active"><a>Search</a></li>
+            <li><a>Custom search</a></li>
+          </ul>
+        </ul>
+      </div>
+      <div>
+        <section class="tab-content">
+          <div class="field has-addons">
+            <div class="control">
+              <input class="input" type="text" placeholder="Search User">
+            </div>
+            <div class="control">
+              <a class="button is-info">
+                Search
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="tab-content">
+          Custum navigation
+        </section>
+      </div>
+    </div>
+
+
+
+    <section class="section container">
+      <table class="table is-striped is-hoverable">
+        <thead>
+        <tr>
+          <th scope="col">Profile</th>
+          <th scope="col">Matricule</th>
+          <th scope="col">Username</th>
+          <th scope="col">Full name</th>
+          <th scope="col">Designation</th>
+          <th scope="col">User group</th>
+          <th scope="col">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>
+            <figure class="image is-48x48">
+              <img class="is-rounded" src="images/profile.jpg">
+            </figure>
+          </td>
+          <td>CMI2</td>
+          <td>Royse225</td>
+          <td>
+
+            <span style="margin-left: 3px">Mbah Royce Chum</span>
+          </td>
+          <td>Communal agent</td>
+          <td>Information system cell</td>
+          <td>
+            <div class="field has-addons">
+              <p class="control">
+                <a href="user_info.html" class="button">
+                  <span class="icon is-small">
+                    <i class="fa-solid fa-eye"></i>
+                  </span>
+                  <span>View</span>
+                </a>
+              </p>
+              <a href="user_edit.html" class="control">
+                <button class="button">
+                  <span class="icon is-small">
+                    <i class="fa-solid fa-user-edit"></i>
+                  </span>
+                  <span>Edit</span>
+                </button>
+              </a>
+              <p class="control">
+                <button class="button">
+                  <span class="icon is-small">
+                    <i class="fa-solid fa-trash"></i>
+                  </span>
+                  <span>Delete</span>
+                </button>
+              </p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <figure class="image is-48x48">
+              <img class="is-rounded" src="images/profile.jpg">
+            </figure>
+          </td>
+          <td>CMI2</td>
+          <td>Royse225</td>
+          <td>
+
+            <span style="margin-left: 3px">Mbah Royce Chum</span>
+          </td>
+          <td>Communal agent</td>
+          <td>Information system cell</td>
+          <td>
+            <div class="field has-addons">
+              <p class="control">
+                <a href="user_info.html" class="button">
+                  <span class="icon is-small">
+                    <i class="fa-solid fa-eye"></i>
+                  </span>
+                  <span>View</span>
+                </a>
+              </p>
+              <a href="user_edit.html" class="control">
+                <button class="button">
+                  <span class="icon is-small">
+                    <i class="fa-solid fa-user-edit"></i>
+                  </span>
+                  <span>Edit</span>
+                </button>
+              </a>
+              <p class="control">
+                <button class="button">
+                  <span class="icon is-small">
+                    <i class="fa-solid fa-trash"></i>
+                  </span>
+                  <span>Delete</span>
+                </button>
+              </p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <figure class="image is-48x48">
+              <img class="is-rounded" src="images/profile.jpg">
+            </figure>
+          </td>
+          <td>CMI2</td>
+          <td>Royse225</td>
+          <td>
+
+            <span style="margin-left: 3px">Mbah Royce Chum</span>
+          </td>
+          <td>Communal agent</td>
+          <td>Information system cell</td>
+          <td>
+            <div class="field has-addons">
+              <p class="control">
+                <a href="user_info.html" class="button">
+                  <span class="icon is-small">
+                    <i class="fa-solid fa-eye"></i>
+                  </span>
+                  <span>View</span>
+                </a>
+              </p>
+              <a href="user_edit.html" class="control">
+                <button class="button">
+                  <span class="icon is-small">
+                    <i class="fa-solid fa-user-edit"></i>
+                  </span>
+                  <span>Edit</span>
+                </button>
+              </a>
+              <p class="control">
+                <button class="button">
+                  <span class="icon is-small">
+                    <i class="fa-solid fa-trash"></i>
+                  </span>
+                  <span>Delete</span>
+                </button>
+              </p>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- navigation panel -->
+    <nav class="pagination" role="pagination">
+      <a class="pagination-previous is-disabled jp-previous jp-disabled ">← previous</a>
+      <a class="pagination-next jp-next">next →</a>
+      <ul class="pagination-list">
+        <li>
+          <a class="pagination-link is-current jp-current">1</a>
+        </li>
+        <li>
+          <a class="pagination-link jp-current">2</a>
+        </li>
+        <li>
+          <a class="pagination-link jp-current">3</a>
+        </li>
+        <li>
+          <a class="pagination-link jp-current">4</a>
+        </li>
+        <li>
+          <a class="pagination-link  jp-current">5</a>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+  <!-- Modal Delete-->
+  <div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Delete User</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Personnel Mbah Royce Chum of matricule 123yz is to be deleted. Enter
+          matricule to confirm delete
+          <form>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="recipient-name" />
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+          <button type="button" class="btn btn-primary">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Block-->
+  <div class="modal fade" id="blockModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="blockModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="blockModal">Block User</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Mbah Royce Chum will be restricted from the platform
+          <form>
+            <label for=""></label>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Choose type</option>
+              <option value="1">indefinitely</option>
+              <option value="2">definitely</option>
+            </select>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Begin Date</label>
+                  <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Begin Date</label>
+                  <input type="time" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">End Date</label>
+                  <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">End Date</label>
+                  <input type="time" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+          <button type="button" class="btn btn-primary">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    let tabsWithContent = (function () {
+      let tabs = document.querySelectorAll('.tabs li');
+      let tabsContent = document.querySelectorAll('.tab-content');
+
+      let deactvateAllTabs = function () {
+        tabs.forEach(function (tab) {
+          tab.classList.remove('is-active');
+        });
+      };
+
+      let hideTabsContent = function () {
+        tabsContent.forEach(function (tabContent) {
+          tabContent.classList.remove('is-active');
+        });
+      };
+
+      let activateTabsContent = function (tab) {
+        tabsContent[getIndex(tab)].classList.add('is-active');
+      };
+
+      let getIndex = function (el) {
+        return [...el.parentElement.children].indexOf(el);
+      };
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          deactvateAllTabs();
+          hideTabsContent();
+          tab.classList.add('is-active');
+          activateTabsContent(tab);
+        });
+      })
+
+      tabs[0].click();
+    })();
+  </script>
+</body>
+
+</html>
