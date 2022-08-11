@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Create User</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
     <link rel="stylesheet" href="node_modules/bulma-extensions/bulma-divider/dist/css/bulma-divider.min.css">
@@ -73,16 +73,16 @@
                                     <div class="field has-addons">
                                         <p class="control">
                                             <a class="button is-static">
-                                                    <span class="icon">
-                                                        <i class="fas fa-calendar"></i>
-                                                    </span>
+                                                <span class="icon">
+                                                    <i class="fas fa-calendar"></i>
+                                                </span>
                                             </a>
                                         </p>
                                         <p class="control is-expanded">
                                             <input class="input" type="date" placeholder="Your date of birth">
                                         </p>
                                     </div>
-                                    <p class="help">Do not enter the first zero</p>
+                                    <p class="help is-info">Do not enter the first zero</p>
                                 </div>
                             </div>
                         </div>
@@ -111,11 +111,11 @@
                                     <div class="control has-icons-left has-icons-right">
                                         <input class="input" type="email" placeholder="Normal">
                                         <span class="icon is-left">
-                                              <i class="fa-solid fa-envelope"></i>
-                                            </span>
+                                          <i class="fa-solid fa-envelope"></i>
+                                        </span>
                                         <span class="icon is-right">
-                                              <i class="fas fa-check"></i>
-                                            </span>
+                                          <i class="fas fa-check"></i>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -132,11 +132,11 @@
                                             <input class="input" type="tags" placeholder="Your phone number">
                                         </p>
                                         <span class="icon is-left">
-                                              <i class="fas fa-phone"></i>
-                                            </span>
+                                          <i class="fas fa-phone"></i>
+                                        </span>
                                         <span class="icon is-right">
-                                              <i class="fas fa-check"></i>
-                                            </span>
+                                          <i class="fas fa-check"></i>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -160,7 +160,7 @@
                                             <input class="input" type="text" placeholder="Enter your address">
                                         </p>
                                     </div>
-                                    <p class="help">Do not enter the first zero</p>
+                                    <p class="help is-info">Do not enter the first zero</p>
                                 </div>
                             </div>
                         </div>
@@ -183,7 +183,7 @@
                                     <div class="control">
                                         <input class="input" type="text" placeholder="ex: HN2328C ...">
                                     </div>
-                                    <p class="help">This is a help text</p>
+                                    <p class="help is-info">This is a help text</p>
                                 </div>
                             </div>
                         </div>
@@ -230,7 +230,7 @@
                             <div class="field-body">
                                 <div class="field">
                                     <div class="control">
-                                        <button class="button is-primary">Set up state</button>
+                                        <a class="button is-primary js-modal-trigger" data-target="modal-account-setter">Set up state</a>
                                     </div>
                                     <p class="help is-danger">
                                         This field is required
@@ -287,13 +287,13 @@
 
                                     <div class="content">
                                         <div class="buttons">
-                                            <button class="button is-primary is-outlined">
+                                            <button class="button is-primary is-light">
                                                 <span class="icon">
                                                     <i class="fa-solid fa-edit"></i>
                                                 </span>
                                                 <span>Change</span>
                                             </button>
-                                            <button class="button is-danger is-outlined">
+                                            <button class="button is-danger is-light">
                                                 <span class="icon">
                                                     <i class="fa-solid fa-trash"></i>
                                                 </span>
@@ -337,18 +337,124 @@
         </div>
     </div>
 
-    <div id="modelAccountState" class="modal">
+    <div id="modal-account-setter" class="modal">
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
-                <p class="modal-card-title">Modal title</p>
+                <p class="modal-card-title">Account Status Manager</p>
                 <button class="delete" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
                 <!-- Content ... -->
+                <article class="message is-warning">
+                    <div class="message-body">
+                        L'etat specifier affecter l'acces de l'utilisateur à la plateforme. Un utilisateur peut avoir
+                        quatre etats à savoir: <strong>actif</strong>, <strong>suspendu</strong>,
+                        <strong>blocqué</strong> et <strong>inactif</strong>.
+                    </div>
+                </article>
+                <div class="field is-horizontal">
+                    <div class="field-label">
+                        <label class="label">Select State</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="select">
+                                <select>
+                                    <option selected>active</option>
+                                    <option>suspended</option>
+                                    <option>blocked</option>
+                                    <option>inactive</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="columns">
+                    <div class="column">
+                        <div class="is-divider mb-1" data-content="Begin time"></div>
+                        <div class="field">
+                            <label class="label">Date</label>
+                            <div class="control">
+                                <div class="field has-addons">
+                                    <p class="control">
+                                        <a class="button is-static">
+                                            <span class="icon">
+                                                <i class="fas fa-calendar"></i>
+                                            </span>
+                                        </a>
+                                    </p>
+                                    <p class="control is-expanded">
+                                        <input class="input" type="date" placeholder="The begin date ...">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Time</label>
+                            <div class="control">
+                                <div class="field has-addons">
+                                    <p class="control">
+                                        <a class="button is-static">
+                                            <span class="icon">
+                                                <i class="fas fa-clock"></i>
+                                            </span>
+                                        </a>
+                                    </p>
+                                    <p class="control is-expanded">
+                                        <input class="input" type="time" placeholder="The begin time">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="is-divider mb-1" data-content="End time"></div>
+                        <div class="field">
+                            <label class="label">Date</label>
+                            <div class="control">
+                                <div class="field has-addons">
+                                    <p class="control">
+                                        <a class="button is-static">
+                                            <span class="icon">
+                                                <i class="fas fa-calendar"></i>
+                                            </span>
+                                        </a>
+                                    </p>
+                                    <p class="control is-expanded">
+                                        <input class="input" type="date" placeholder="The begin date ...">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Time</label>
+                            <div class="control">
+                                <div class="field has-addons">
+                                    <p class="control">
+                                        <a class="button is-static">
+                                            <span class="icon">
+                                                <i class="fas fa-clock"></i>
+                                            </span>
+                                        </a>
+                                    </p>
+                                    <p class="control is-expanded">
+                                        <input class="input" type="time" placeholder="The begin time">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             <footer class="modal-card-foot">
-                <button class="button is-success">Save changes</button>
+                <button class="button is-success">
+                    <span class="icon">
+                        <i class="fa-solid fa-save"></i>
+                    </span>
+                    <span>Save changes</span>
+                </button>
                 <button class="button">Cancel</button>
             </footer>
         </div>
@@ -356,6 +462,54 @@
 
     <script>
         bulmaTagsinput.attach();
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Functions to open and close a modal
+            function openModal($el) {
+                $el.classList.add('is-active');
+            }
+
+            function closeModal($el) {
+                $el.classList.remove('is-active');
+            }
+
+            function closeAllModals() {
+                (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+                    closeModal($modal);
+                });
+            }
+
+            // Add a click event on buttons to open a specific modal
+            (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+                const modal = $trigger.dataset.target;
+                const $target = document.getElementById(modal);
+                console.log($target);
+
+                $trigger.addEventListener('click', () => {
+                    openModal($target);
+                });
+            });
+
+            // Add a click event on various child elements to close the parent modal
+            (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+                const $target = $close.closest('.modal');
+
+                $close.addEventListener('click', () => {
+                    closeModal($target);
+                });
+            });
+
+            // Add a keyboard event to close all modals
+            document.addEventListener('keydown', (event) => {
+                const e = event || window.event;
+
+                if (e.keyCode === 27) { // Escape key
+                    closeAllModals();
+                }
+            });
+        });
     </script>
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script> -->
