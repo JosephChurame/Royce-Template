@@ -37,16 +37,20 @@
 
   <div class="container my-6">
 
-    <h2 class="title is-2">Search User</h2>
-    <article class="message is-info">
-      <div class="message-header">
-        <p>Info</p>
-        <button class="delete" aria-label="delete"></button>
-      </div>
-      <div class="message-body">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-      </div>
-    </article>
+    <div class="container mx-4">
+
+      <h2 class="title is-2">Search User</h2>
+      <article class="message is-info">
+        <div class="message-header">
+          <p>Info</p>
+          <button class="delete" aria-label="delete"></button>
+        </div>
+        <div class="message-body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+        </div>
+      </article>
+    </div>
+
 
     <div id="tabs-with-content">
       <div class="tabs is-centered">
@@ -79,154 +83,242 @@
 
 
     <section class="section container">
-      <table class="table is-striped is-hoverable">
-        <thead>
-        <tr>
-          <th scope="col">Profile</th>
-          <th scope="col">Matricule</th>
-          <th scope="col">Username</th>
-          <th scope="col">Full name</th>
-          <th scope="col">Designation</th>
-          <th scope="col">User group</th>
-          <th scope="col">Actions</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>
-            <figure class="image is-48x48">
-              <img class="is-rounded" src="images/profile.jpg">
-            </figure>
-          </td>
-          <td>CMI2</td>
-          <td>Royse225</td>
-          <td>
+      <div class="table-container">
+        <table class="table is-striped is-hoverable">
+          <thead>
+          <tr>
+            <th scope="col">Profile</th>
+            <th scope="col">Matricule</th>
+            <th scope="col">Username</th>
+            <th scope="col">Full name</th>
+            <th scope="col">Designation</th>
+            <th scope="col">User group</th>
+            <th scope="col">Actions</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>
+              <figure class="image is-48x48">
+                <img class="is-rounded" src="images/profile.jpg">
+              </figure>
+            </td>
+            <td>CMI2</td>
+            <td>Royse225</td>
+            <td>
 
-            <span style="margin-left: 3px">Mbah Royce Chum</span>
-          </td>
-          <td>Communal agent</td>
-          <td>Information system cell</td>
-          <td>
-            <div class="field has-addons">
-              <p class="control">
-                <a href="user_info.html" class="button">
+              <span style="margin-left: 3px">Mbah Royce Chum</span>
+            </td>
+            <td>Communal agent</td>
+            <td>Information system cell</td>
+            <td>
+              <div class="field has-addons">
+                <p class="control">
+                  <a href="user_info.html" class="button is-info is-outlined">
                   <span class="icon is-small">
                     <i class="fa-solid fa-eye"></i>
                   </span>
-                  <span>View</span>
-                </a>
-              </p>
-              <a href="user_edit.html" class="control">
-                <button class="button">
+                    <span>View</span>
+                  </a>
+                </p>
+                <p class="control">
+                  <a href="user_edit.html" class="button is-link is-outlined">
                   <span class="icon is-small">
                     <i class="fa-solid fa-user-edit"></i>
                   </span>
-                  <span>Edit</span>
-                </button>
-              </a>
-              <p class="control">
-                <button class="button">
+                    <span>Edit</span>
+                  </a>
+                </p>
+                <p class="control">
+                  <button class="button is-danger is-outlined">
                   <span class="icon is-small">
                     <i class="fa-solid fa-trash"></i>
                   </span>
-                  <span>Delete</span>
-                </button>
-              </p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <figure class="image is-48x48">
-              <img class="is-rounded" src="images/profile.jpg">
-            </figure>
-          </td>
-          <td>CMI2</td>
-          <td>Royse225</td>
-          <td>
+                    <span>Delete</span>
+                  </button>
+                </p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <figure class="image is-48x48">
+                <img class="is-rounded" src="images/profile.jpg">
+              </figure>
+            </td>
+            <td>CMI2</td>
+            <td>Royse225</td>
+            <td>
 
-            <span style="margin-left: 3px">Mbah Royce Chum</span>
-          </td>
-          <td>Communal agent</td>
-          <td>Information system cell</td>
-          <td>
-            <div class="field has-addons">
-              <p class="control">
-                <a href="user_info.html" class="button">
+              <span style="margin-left: 3px">Mbah Royce Chum</span>
+            </td>
+            <td>Communal agent</td>
+            <td>Information system cell</td>
+            <td>
+              <div class="field has-addons">
+                <p class="control">
+                  <a href="user_info.html" class="button is-info is-outlined">
                   <span class="icon is-small">
                     <i class="fa-solid fa-eye"></i>
                   </span>
-                  <span>View</span>
-                </a>
-              </p>
-              <a href="user_edit.html" class="control">
-                <button class="button">
+                    <span>View</span>
+                  </a>
+                </p>
+                <p class="control">
+                  <a href="user_edit.html" class="button is-link is-outlined">
                   <span class="icon is-small">
                     <i class="fa-solid fa-user-edit"></i>
                   </span>
-                  <span>Edit</span>
-                </button>
-              </a>
-              <p class="control">
-                <button class="button">
+                    <span>Edit</span>
+                  </a>
+                </p>
+                <p class="control">
+                  <button class="button is-danger is-outlined">
                   <span class="icon is-small">
                     <i class="fa-solid fa-trash"></i>
                   </span>
-                  <span>Delete</span>
-                </button>
-              </p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <figure class="image is-48x48">
-              <img class="is-rounded" src="images/profile.jpg">
-            </figure>
-          </td>
-          <td>CMI2</td>
-          <td>Royse225</td>
-          <td>
+                    <span>Delete</span>
+                  </button>
+                </p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <figure class="image is-48x48">
+                <img class="is-rounded" src="images/profile.jpg">
+              </figure>
+            </td>
+            <td>CMI2</td>
+            <td>Royse225</td>
+            <td>
 
-            <span style="margin-left: 3px">Mbah Royce Chum</span>
-          </td>
-          <td>Communal agent</td>
-          <td>Information system cell</td>
-          <td>
-            <div class="field has-addons">
-              <p class="control">
-                <a href="user_info.html" class="button">
+              <span style="margin-left: 3px">Mbah Royce Chum</span>
+            </td>
+            <td>Communal agent</td>
+            <td>Information system cell</td>
+            <td>
+              <div class="field has-addons">
+                <p class="control">
+                  <a href="user_info.html" class="button is-info is-outlined">
                   <span class="icon is-small">
                     <i class="fa-solid fa-eye"></i>
                   </span>
-                  <span>View</span>
-                </a>
-              </p>
-              <a href="user_edit.html" class="control">
-                <button class="button">
+                    <span>View</span>
+                  </a>
+                </p>
+                <p class="control">
+                  <a href="user_edit.html" class="button is-link is-outlined">
                   <span class="icon is-small">
                     <i class="fa-solid fa-user-edit"></i>
                   </span>
-                  <span>Edit</span>
-                </button>
-              </a>
-              <p class="control">
-                <button class="button">
+                    <span>Edit</span>
+                  </a>
+                </p>
+                <p class="control">
+                  <button class="button is-danger is-outlined">
                   <span class="icon is-small">
                     <i class="fa-solid fa-trash"></i>
                   </span>
-                  <span>Delete</span>
-                </button>
-              </p>
-            </div>
-          </td>
-        </tr>
-        </tbody>
-      </table>
+                    <span>Delete</span>
+                  </button>
+                </p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <figure class="image is-48x48">
+                <img class="is-rounded" src="images/profile.jpg">
+              </figure>
+            </td>
+            <td>CMI2</td>
+            <td>Royse225</td>
+            <td>
+
+              <span style="margin-left: 3px">Mbah Royce Chum</span>
+            </td>
+            <td>Communal agent</td>
+            <td>Information system cell</td>
+            <td>
+              <div class="field has-addons">
+                <p class="control">
+                  <a href="user_info.html" class="button is-info is-outlined">
+                  <span class="icon is-small">
+                    <i class="fa-solid fa-eye"></i>
+                  </span>
+                    <span>View</span>
+                  </a>
+                </p>
+                <p class="control">
+                  <a href="user_edit.html" class="button is-link is-outlined">
+                  <span class="icon is-small">
+                    <i class="fa-solid fa-user-edit"></i>
+                  </span>
+                    <span>Edit</span>
+                  </a>
+                </p>
+                <p class="control">
+                  <button class="button is-danger is-outlined">
+                  <span class="icon is-small">
+                    <i class="fa-solid fa-trash"></i>
+                  </span>
+                    <span>Delete</span>
+                  </button>
+                </p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <figure class="image is-48x48">
+                <img class="is-rounded" src="images/profile.jpg">
+              </figure>
+            </td>
+            <td>CMI2</td>
+            <td>Royse225</td>
+            <td>
+
+              <span style="margin-left: 3px">Mbah Royce Chum</span>
+            </td>
+            <td>Communal agent</td>
+            <td>Information system cell</td>
+            <td>
+              <div class="field has-addons">
+                <p class="control">
+                  <a href="user_info.html" class="button is-info is-outlined">
+                  <span class="icon is-small">
+                    <i class="fa-solid fa-eye"></i>
+                  </span>
+                    <span>View</span>
+                  </a>
+                </p>
+                <p class="control">
+                  <a href="user_edit.html" class="button is-link is-outlined">
+                  <span class="icon is-small">
+                    <i class="fa-solid fa-user-edit"></i>
+                  </span>
+                    <span>Edit</span>
+                  </a>
+                </p>
+                <p class="control">
+                  <button class="button is-danger is-outlined">
+                  <span class="icon is-small">
+                    <i class="fa-solid fa-trash"></i>
+                  </span>
+                    <span>Delete</span>
+                  </button>
+                </p>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <!-- navigation panel -->
-    <nav class="pagination" role="pagination">
+    <nav class="pagination mx-4" role="pagination">
       <a class="pagination-previous is-disabled jp-previous jp-disabled ">← previous</a>
       <a class="pagination-next jp-next">next →</a>
       <ul class="pagination-list">
