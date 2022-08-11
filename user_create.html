@@ -8,6 +8,8 @@
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
     <link rel="stylesheet" href="node_modules/bulma-extensions/bulma-divider/dist/css/bulma-divider.min.css">
+    <link rel="stylesheet" href="node_modules/bulma-extensions/bulma-checkradio/dist/css/bulma-checkradio.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css">
 
 </head>
 
@@ -20,131 +22,252 @@
                 <h2 class="title is-2">CREATE USER</h2>
                 <div class="is-divider"></div>
                 <form>
-                    <div class="row">
-                        <div id="profile-container" style="width:fit-content;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-                            </svg>
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Profile Picture</label>
-                            <input type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">First Name</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Second Name</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Sex</label>
-                                <div class="mt-1">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" checked>
-                                        <label class="form-check-label" for="inlineRadio1">Male</label>
+                    <div class="columns">
+                        <div class="column">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label"></label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="field">
+                                            <label class="label">Firstname</label>
+                                            <div class="control">
+                                                <input class="input" type="text" placeholder="ex: Mbah ...">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="gender" id="inlineRadio2">
-                                        <label class="form-check-label" for="inlineRadio2">Female</label>
+                                    <div class="field">
+                                        <div class="field">
+                                            <label class="label">Last name</label>
+                                            <div class="control">
+                                                <input class="input" type="text" placeholder="ex: Joseph ...">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Date of Birth</label>
-                                <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Designation</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Contact</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Account State</label>
-                                <a type="" class="btn btn-primary px-2" data-bs-toggle="modal" data-bs-target="#blockModal">
-                                    Choose
-                                </a>
-                                <!-- <div class="mt-1">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
-                                        <label class="form-check-label" for="inlineRadio1">Active</label>
+
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Date of Birth</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field is-expanded">
+                                        <div class="field has-addons">
+                                            <p class="control">
+                                                <a class="button is-static">
+                                                    <span class="icon">
+                                                        <i class="fas fa-calendar"></i>
+                                                    </span>
+                                                </a>
+                                            </p>
+                                            <p class="control is-expanded">
+                                                <input class="input" type="tel" placeholder="Your phone number">
+                                            </p>
+                                        </div>
+                                        <p class="help">Do not enter the first zero</p>
                                     </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                        <label class="form-check-label" for="inlineRadio2">Block</label>
+                                </div>
+                            </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Gender</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <input class="is-checkradio" id="exampleRadioInline1" type="radio" name="exampleRadioInline" checked="checked">
+                                        <label for="exampleRadioInline1">Male</label>
+                                        <input class="is-checkradio" id="exampleRadioInline2" type="radio" name="exampleRadioInline">
+                                        <label for="exampleRadioInline2">Femele</label>
                                     </div>
-                                </div> -->
+                                </div>
+                            </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Subject</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input is-danger" type="text" placeholder="e.g. Partnership opportunity">
+                                        </div>
+                                        <p class="help is-danger">
+                                            This field is required
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                </div>
+                                <div class="field-body">
+                                    <div class="is-divider"></div>
+                                </div>
+                            </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Question</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <textarea class="textarea" placeholder="Explain how we can help you"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-label">
+                                    <!-- Left empty for spacing -->
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <button class="button is-primary">
+                                                Send message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Second Name</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Sex</label>
+                                        <div class="mt-1">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" checked>
+                                                <label class="form-check-label" for="inlineRadio1">Male</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="gender" id="inlineRadio2">
+                                                <label class="form-check-label" for="inlineRadio2">Female</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Date of Birth</label>
+                                        <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Designation</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Contact</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Account State</label>
+                                        <a type="" class="btn btn-primary px-2" data-bs-toggle="modal" data-bs-target="#blockModal">
+                                            Choose
+                                        </a>
+                                        <!-- <div class="mt-1">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                                                <label class="form-check-label" for="inlineRadio1">Active</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                <label class="form-check-label" for="inlineRadio2">Block</label>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="col-lg-12">
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">Select User Group</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Select User Group -- </option>
+                                                <option value="2">Service Technique</option>
+                                                <option value="3">Cellule De Project</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Matricule</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col d-flex justify-content-center">
+                                    <button type="submit" class="btn btn-danger">Reset</button>
+                                </div>
+                                <div class="col d-flex justify-content-center">
+                                    <button type="submit" class="btn btn-success">Create</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="col-lg-12">
+                        <div class="column is-4">
+                            <div class="row">
+                                <div id="profile-container" style="width:fit-content;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                    </svg>
+                                </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Select User Group</label>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>Select User Group -- </option>
-                                        <option value="2">Service Technique</option>
-                                        <option value="3">Cellule De Project</option>
-                                    </select>
+                                    <label for="exampleInputEmail1" class="form-label">Profile Picture</label>
+                                    <input type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Matricule</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col d-flex justify-content-center">
-                            <button type="submit" class="btn btn-danger">Reset</button>
-                        </div>
-                        <div class="col d-flex justify-content-center">
-                            <button type="submit" class="btn btn-success">Create</button>
-                        </div>
-                    </div>
+
                 </form>
             </div>
         </div>
