@@ -8,19 +8,33 @@
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
     <link rel="stylesheet" href="node_modules/bulma-extensions/bulma-divider/dist/css/bulma-divider.min.css">
+    <link rel="stylesheet" href="node_modules/bulma-extensions/bulma-tagsinput/dist/css/bulma-tagsinput.min.css">
     <link rel="stylesheet" href="node_modules/bulma-extensions/bulma-checkradio/dist/css/bulma-checkradio.min.css">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css">
+
+    <script src="node_modules/bulma-extensions/bulma-tagsinput/dist/js/bulma-tagsinput.min.js"></script>
 
 </head>
 
 <body>
     <!-- Modal Block-->
-    <div class="container mt-6">
+    <div class="container my-6">
 
         <div class="box">
             <div class="card-body">
                 <h2 class="title is-2">CREATE USER</h2>
                 <div class="is-divider"></div>
+
+                <article class="message is-info">
+                    <div class="message-header">
+                        <p>Info</p>
+                        <button class="delete" aria-label="delete"></button>
+                    </div>
+                    <div class="message-body">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                    </div>
+                </article>
+
                 <form>
                     <div class="columns">
                         <div class="column">
@@ -63,13 +77,14 @@
                                                 </a>
                                             </p>
                                             <p class="control is-expanded">
-                                                <input class="input" type="tel" placeholder="Your phone number">
+                                                <input class="input" type="date" placeholder="Your date of birth">
                                             </p>
                                         </div>
                                         <p class="help">Do not enter the first zero</p>
                                     </div>
                                 </div>
                             </div>
+
 
                             <div class="field is-horizontal">
                                 <div class="field-label is-normal">
@@ -87,19 +102,67 @@
 
                             <div class="field is-horizontal">
                                 <div class="field-label is-normal">
-                                    <label class="label">Subject</label>
+                                    <label class="label">Email</label>
                                 </div>
                                 <div class="field-body">
                                     <div class="field">
-                                        <div class="control">
-                                            <input class="input is-danger" type="text" placeholder="e.g. Partnership opportunity">
+                                        <div class="control has-icons-left has-icons-right">
+                                            <input class="input" type="email" placeholder="Normal">
+                                            <span class="icon is-left">
+                                              <i class="fas fa-envelope"></i>
+                                            </span>
+                                            <span class="icon is-right">
+                                              <i class="fas fa-check"></i>
+                                            </span>
                                         </div>
-                                        <p class="help is-danger">
-                                            This field is required
-                                        </p>
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="field is-horizontal mb-2">
+                                <div class="field-label">
+                                    <label class="label">Phone number</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control has-icons-left has-icons-right">
+                                            <p class="control is-expanded" style="max-width: 700px!important;">
+                                                <input class="input" type="tags" placeholder="Your phone number">
+                                            </p>
+                                            <span class="icon is-left">
+                                              <i class="fas fa-envelope"></i>
+                                            </span>
+                                            <span class="icon is-right">
+                                              <i class="fas fa-check"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field is-horizontal mt-5">
+                                <div class="field-label">
+                                    <label class="label">Address</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field is-expanded">
+                                        <div class="field has-addons">
+                                            <p class="control">
+                                                <a class="button is-static">
+                                                    <span class="icon">
+                                                        <i class="fa fa-phone"></i>
+                                                    </span>
+                                                </a>
+                                            </p>
+                                            <p class="control is-expanded">
+                                                <input class="input" type="text" placeholder="Enter your address">
+                                            </p>
+                                        </div>
+                                        <p class="help">Do not enter the first zero</p>
+                                    </div>
+                                </div>
+                            </div>
+
 
                             <div class="field is-horizontal">
                                 <div class="field-label is-normal">
@@ -111,161 +174,152 @@
 
                             <div class="field is-horizontal">
                                 <div class="field-label is-normal">
-                                    <label class="label">Question</label>
+                                    <label class="label">Matricule</label>
                                 </div>
                                 <div class="field-body">
                                     <div class="field">
                                         <div class="control">
-                                            <textarea class="textarea" placeholder="Explain how we can help you"></textarea>
+                                            <input class="input" type="text" placeholder="ex: HN2328C ...">
                                         </div>
+                                        <p class="help">This is a help text</p>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="field is-horizontal">
-                                <div class="field-label">
-                                    <!-- Left empty for spacing -->
+                                <div class="field-label is-normal">
+                                    <label class="label">Designation</label>
                                 </div>
                                 <div class="field-body">
                                     <div class="field">
                                         <div class="control">
-                                            <button class="button is-primary">
-                                                Send message
-                                            </button>
+                                            <input class="input" type="text" placeholder="e.g. Communal agent ...">
                                         </div>
+                                        <p class="help is-danger">
+                                            This field is required
+                                        </p>
                                     </div>
                                 </div>
                             </div>
 
-
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">First Name</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                    </div>
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">User Group</label>
                                 </div>
-                                <div class="col-lg-6">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Second Name</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Sex</label>
-                                        <div class="mt-1">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" checked>
-                                                <label class="form-check-label" for="inlineRadio1">Male</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="gender" id="inlineRadio2">
-                                                <label class="form-check-label" for="inlineRadio2">Female</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Date of Birth</label>
-                                        <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Designation</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Email</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Contact</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Account State</label>
-                                        <a type="" class="btn btn-primary px-2" data-bs-toggle="modal" data-bs-target="#blockModal">
-                                            Choose
-                                        </a>
-                                        <!-- <div class="mt-1">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
-                                                <label class="form-check-label" for="inlineRadio1">Active</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                                <label class="form-check-label" for="inlineRadio2">Block</label>
-                                            </div>
-                                        </div> -->
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="col-lg-12">
-                                        <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label">Select User Group</label>
-                                            <select class="form-select" aria-label="Default select example">
-                                                <option selected>Select User Group -- </option>
-                                                <option value="2">Service Technique</option>
-                                                <option value="3">Cellule De Project</option>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="select">
+                                            <select>
+                                                <option>Select your user group -- </option>
+                                                <option>With options</option>
                                             </select>
                                         </div>
+                                        <p class="help is-danger">
+                                            This field is required
+                                        </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Matricule</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Account state</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <button class="button is-primary">Set up state</button>
+                                        </div>
+                                        <p class="help is-danger">
+                                            This field is required
+                                        </p>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row mt-3">
-                                <div class="col d-flex justify-content-center">
-                                    <button type="submit" class="btn btn-danger">Reset</button>
-                                </div>
-                                <div class="col d-flex justify-content-center">
-                                    <button type="submit" class="btn btn-success">Create</button>
                                 </div>
                             </div>
                         </div>
+
                         <div class="column is-4">
-                            <div class="row">
-                                <div id="profile-container" style="width:fit-content;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-                                    </svg>
+                            <div class="container">
+                                <h4 class="title is-4">Image profile</h4>
+                                <article class="message is-primary">
+                                    <div class="message-body">
+                                        You must choose the user image profile, however there is a default image.
+                                    </div>
+                                </article>
+
+                                <div class="file has-name">
+                                    <label class="file-label">
+                                        <input class="file-input" type="file" name="resume">
+                                        <span class="file-cta">
+                                          <span class="file-icon">
+                                            <i class="fas fa-upload"></i>
+                                          </span>
+                                          <span class="file-label">
+                                            Choose a file…
+                                          </span>
+                                        </span>
+                                        <span class="file-name">
+                                          Screen Shot 2017-07-29 at 15.54.25.png
+                                        </span>
+                                    </label>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Profile Picture</label>
-                                    <input type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                                <div class="card mt-4">
+                                    <div class="card-image">
+                                        <figure class="image is-4by3">
+                                            <img src="images/profile.jpg" alt="Placeholder image">
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <span class="icon is-large">
+                                                    <i class="fa fa-image-portrait"></i>
+                                                </span>
+                                            </div>
+                                            <div class="media-content">
+                                                <p class="title is-5">JScreen Shot 2017-07-29 at 15.54.25.png</p>
+                                                <p class="subtitle is-6">size: 45865 kb</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+                                            <div class="buttons">
+                                                <button class="button is-primary is-light">Change</button>
+                                                <button class="button is-link is-light">Delete</button>
+                                            </div>
+                                            <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="columns mt-4">
+                        <div class="column">
+                            <div class="field is-horizontal">
+                                <div class="field-label">
+                                    <!-- Left empty for spacing -->
+                                </div>
+                                <div class="field-body">
+                                    <div class="field is-grouped">
+                                        <p class="control">
+                                            <a class="button is-primary">
+                                                Submit
+                                            </a>
+                                        </p>
+                                        <p class="control">
+                                            <a class="button is-light">
+                                                Cancel
+                                            </a>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="column is-4"></div>
                     </div>
 
                 </form>
@@ -273,6 +327,9 @@
         </div>
     </div>
 
+    <script>
+        bulmaTagsinput.attach();
+    </script>
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script> -->
 
