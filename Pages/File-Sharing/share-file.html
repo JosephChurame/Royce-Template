@@ -17,6 +17,20 @@
 
     <script src="../../node_modules/bulma-extensions/bulma-tagsinput/dist/js/bulma-tagsinput.min.js"></script>
 
+    <style>
+        .tabs-with-content .tabs:not(:last-child) {
+            margin-bottom: 0;
+        }
+
+        .tabs-with-content .tab-content {
+            padding: 1rem;
+            display: none;
+        }
+
+        .tabs-with-content .tab-content.is-active {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
@@ -440,49 +454,66 @@
                 <button class="delete" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
-                <div class="tabs is-boxed">
-                    <ul>
-                        <li class="is-active" data-target="group-list">
-                            <a>
-                                <span class="icon is-small"><i class="fa-solid fa-user-group"></i></span>
-                                <span>Groups</span>
-                            </a>
-                        </li>
-                        <li data-target="user-list">
-                            <a>
-                                <span class="icon is-small"><i class="fa-solid fa-user-group"></i></span>
-                                <span>Users</span>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="tabs-with-content">
+                    <div class="tabs is-boxed">
+                        <ul>
+                            <li class="is-active">
+                                <a>
+                                    <span class="icon">
+                                        <i class="fa-solid fa-people-group"></i>
+                                    </span>
+                                    <span>User groups</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <span class="icon">
+                                        <i class="fa-solid fa-user-group"></i>
+                                    </span>
+                                    <span>Users</span>
+                                </a>
+                            </li>
+                        </ul>
 
-                </div>
-                <div id="tab-content">
-                    <div class="field" id="group-list">
-                        <div class="select is-multiple">
-                            <select multiple size="8">
-                                <option value="Argentina">Argentina</option>
-                                <option value="Bolivia">Bolivia</option>
-                                <option value="Brazil">Brazil</option>
-                                <option value="Chile">Chile</option>
-                                <option value="Colombia">Colombia</option>
-                                <option value="Ecuador">Ecuador</option>
-                                <option value="Guyana">Guyana</option>
-                                <option value="Paraguay">Paraguay</option>
-                                <option value="Peru">Peru</option>
-                                <option value="Suriname">Suriname</option>
-                                <option value="Uruguay">Uruguay</option>
-                                <option value="Venezuela">Venezuela</option>
-                            </select>
-                        </div>
                     </div>
-                    <div class="field is-hidden" id="user-list">
-                        <div class="control has-icons-left is-half">
-                            <input class="input is-primary" type="text" placeholder="Search">
-                            <span class="icon is-left">
+                    <div>
+                        <section class="tab-content">
+                            <article class="message">
+                                <div class="message-body">
+                                    You can select one or many user group, just hold <em>CTRL</em> and select. To apply, click on Save Changes button.
+                                </div>
+                            </article>
+                            <div class="container">
+                                <div class="columns is-centered">
+                                    <div class="column is-10">
+                                        <div class="select is-multiple is-fullwidth">
+                                            <select multiple size="8">
+                                                <option value="Argentina">Argentina</option>
+                                                <option value="Bolivia">Bolivia</option>
+                                                <option value="Brazil">Brazil</option>
+                                                <option value="Chile">Chile</option>
+                                                <option value="Colombia">Colombia</option>
+                                                <option value="Ecuador">Ecuador</option>
+                                                <option value="Guyana">Guyana</option>
+                                                <option value="Paraguay">Paraguay</option>
+                                                <option value="Peru">Peru</option>
+                                                <option value="Suriname">Suriname</option>
+                                                <option value="Uruguay">Uruguay</option>
+                                                <option value="Venezuela">Venezuela</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="tab-content">
+                            <div class="control has-icons-left is-half">
+                                <input class="input is-primary" type="text" placeholder="Search">
+                                <span class="icon is-left">
                                 <i class="fas fa-search" aria-hidden="true"></i>
                             </span>
-                        </div>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </section>
@@ -568,26 +599,41 @@
     </script>
 
     <script>
-        //tabs
-        const tabs = document.querySelectorAll('.tabs li');
-        const tabContentBoxes = document.querySelectorAll('#tab-content > div');
-        tabs.forEach((tab) => {
-            tab.addEventListener('click', () => {
-                tabs.forEach(item => item.classList.remove('is-active'))
-                tab.classList.add('is-active');
+        let tabsWithContent = (function () {
+            let tabs = document.querySelectorAll('.tabs li');
+            let tabsContent = document.querySelectorAll('.tab-content');
 
-                const target = tab.dataset.target;
-                tabContentBoxes.forEach(box => {
-                    if (box.getAttribute('id') === target) {
-                        box.classList.remove('is-hidden');
-                    } else {
-                        box.classList.add('is-hidden')
-                    }
-                })
+            let deactvateAllTabs = function () {
+                tabs.forEach(function (tab) {
+                    tab.classList.remove('is-active');
+                });
+            };
 
+            let hideTabsContent = function () {
+                tabsContent.forEach(function (tabContent) {
+                    tabContent.classList.remove('is-active');
+                });
+            };
+
+            let activateTabsContent = function (tab) {
+                tabsContent[getIndex(tab)].classList.add('is-active');
+            };
+
+            let getIndex = function (el) {
+                return [...el.parentElement.children].indexOf(el);
+            };
+
+            tabs.forEach(function (tab) {
+                tab.addEventListener('click', function () {
+                    deactvateAllTabs();
+                    hideTabsContent();
+                    tab.classList.add('is-active');
+                    activateTabsContent(tab);
+                });
             })
 
-        });
+            tabs[0].click();
+        })();
     </script>
 </body>
 
