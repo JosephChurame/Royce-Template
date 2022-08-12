@@ -56,8 +56,22 @@
       <div class="tabs is-centered">
         <ul>
           <ul>
-            <li class="is-active"><a>Search</a></li>
-            <li><a>Custom search</a></li>
+            <li class="is-active">
+              <a>
+                <span class="icon">
+                  <i class="fa-solid fa-search"></i>
+                </span>
+                <span>Search</span>
+              </a>
+            </li>
+            <li>
+              <a>
+                <span class="icon">
+                  <i class="fa-solid fa-sliders"></i>
+                </span>
+                <span>Custom search</span>
+              </a>
+            </li>
           </ul>
         </ul>
       </div>
@@ -73,9 +87,81 @@
               </a>
             </div>
           </div>
+          <p class="subtitle is-5 has-text-primary-dark">Result:  5 item(s) found.</p>
         </section>
         <section class="tab-content">
-          Custum navigation
+          <div class="columns is-centered">
+            <div class="column is-10">
+              <form>
+                <div class="columns">
+                  <div class="column">
+                    <div class="field">
+                      <label class="label">Username</label>
+                      <div class="control has-icons-left">
+                        <input class="input" type="text" placeholder="ex: Royc036">
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-user"></i>
+                        </span>
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label class="label">firstname</label>
+                      <div class="control">
+                        <input class="input" type="text" placeholder="ex: Ngalle">
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label class="label">lastname</label>
+                      <div class="control">
+                        <input class="input" type="text" placeholder="ex: Ngalle">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="field">
+                      <label class="label">Birth of Date</label>
+                      <div class="control has-icons-left">
+                        <input class="input" type="date" placeholder="your Birth of date">
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-calendar"></i>
+                        </span>
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label class="label">Matricule</label>
+                      <div class="control has-icons-left">
+                        <input class="input" type="date" placeholder="ex: JT025d">
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-id-badge"></i>
+                        </span>
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label class="label">User group</label>
+                      <div class="control has-icons-left">
+                        <div class="select">
+                          <select>
+                            <option>Select user group -- </option>
+                            <option>With options</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <button type="submit" class="button is-primary is-fullwidth">
+                  Search
+                </button>
+
+              </form>
+            </div>
+          </div>
         </section>
       </div>
     </div>
@@ -83,238 +169,243 @@
 
 
     <section class="section container">
-      <div class="table-container">
-        <table class="table is-striped is-hoverable">
-          <thead>
-          <tr>
-            <th scope="col">Profile</th>
-            <th scope="col">Matricule</th>
-            <th scope="col">Username</th>
-            <th scope="col">Full name</th>
-            <th scope="col">Designation</th>
-            <th scope="col">User group</th>
-            <th scope="col">Actions</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>
-              <figure class="image is-48x48">
-                <img class="is-rounded" src="images/profile.jpg">
-              </figure>
-            </td>
-            <td>CMI2</td>
-            <td>Royse225</td>
-            <td>
+      <div class="columns is-centered">
+        <div class="column is-11">
+          <div class="table-container is-fullwidth">
+            <table class="table is-striped is-hoverable is-fullwidth">
+              <thead>
+              <tr>
+                <th scope="col">Profile</th>
+                <th scope="col">Matricule</th>
+                <th scope="col">Username</th>
+                <th scope="col">Full name</th>
+                <th scope="col">Designation</th>
+                <th scope="col">User group</th>
+                <th scope="col">Actions</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>
+                  <figure class="image is-48x48">
+                    <img class="is-rounded" src="images/profile.jpg">
+                  </figure>
+                </td>
+                <td>CMI2</td>
+                <td>Royse225</td>
+                <td>
 
-              <span style="margin-left: 3px">Mbah Royce Chum</span>
-            </td>
-            <td>Communal agent</td>
-            <td>Information system cell</td>
-            <td>
-              <div class="field has-addons">
-                <p class="control">
-                  <a href="user_info.html" class="button is-info is-outlined">
+                  <span style="margin-left: 3px">Mbah Royce Chum</span>
+                </td>
+                <td>Communal agent</td>
+                <td>Information system cell</td>
+                <td>
+                  <div class="field has-addons">
+                    <p class="control">
+                      <a href="user_info.html" class="button is-info is-outlined">
                   <span class="icon is-small">
                     <i class="fa-solid fa-eye"></i>
                   </span>
-                    <span>View</span>
-                  </a>
-                </p>
-                <p class="control">
-                  <a href="user_edit.html" class="button is-link is-outlined">
+                        <span>View</span>
+                      </a>
+                    </p>
+                    <p class="control">
+                      <a href="user_edit.html" class="button is-link is-outlined">
                   <span class="icon is-small">
                     <i class="fa-solid fa-user-edit"></i>
                   </span>
-                    <span>Edit</span>
-                  </a>
-                </p>
-                <p class="control">
-                  <button class="button is-danger is-outlined js-modal-trigger" data-target="modal-delete-user">
+                        <span>Edit</span>
+                      </a>
+                    </p>
+                    <p class="control">
+                      <button class="button is-danger is-outlined js-modal-trigger" data-target="modal-delete-user">
                   <span class="icon is-small">
                     <i class="fa-solid fa-trash"></i>
                   </span>
-                    <span>Delete</span>
-                  </button>
-                </p>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <figure class="image is-48x48">
-                <img class="is-rounded" src="images/profile.jpg">
-              </figure>
-            </td>
-            <td>CMI2</td>
-            <td>Royse225</td>
-            <td>
+                        <span>Delete</span>
+                      </button>
+                    </p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <figure class="image is-48x48">
+                    <img class="is-rounded" src="images/profile.jpg">
+                  </figure>
+                </td>
+                <td>CMI2</td>
+                <td>Royse225</td>
+                <td>
 
-              <span style="margin-left: 3px">Mbah Royce Chum</span>
-            </td>
-            <td>Communal agent</td>
-            <td>Information system cell</td>
-            <td>
-              <div class="field has-addons">
-                <p class="control">
-                  <a href="user_info.html" class="button is-info is-outlined">
+                  <span style="margin-left: 3px">Mbah Royce Chum</span>
+                </td>
+                <td>Communal agent</td>
+                <td>Information system cell</td>
+                <td>
+                  <div class="field has-addons">
+                    <p class="control">
+                      <a href="user_info.html" class="button is-info is-outlined">
                   <span class="icon is-small">
                     <i class="fa-solid fa-eye"></i>
                   </span>
-                    <span>View</span>
-                  </a>
-                </p>
-                <p class="control">
-                  <a href="user_edit.html" class="button is-link is-outlined">
+                        <span>View</span>
+                      </a>
+                    </p>
+                    <p class="control">
+                      <a href="user_edit.html" class="button is-link is-outlined">
                   <span class="icon is-small">
                     <i class="fa-solid fa-user-edit"></i>
                   </span>
-                    <span>Edit</span>
-                  </a>
-                </p>
-                <p class="control">
-                  <button class="button is-danger is-outlined js-modal-trigger" data-target="modal-delete-user">
+                        <span>Edit</span>
+                      </a>
+                    </p>
+                    <p class="control">
+                      <button class="button is-danger is-outlined js-modal-trigger" data-target="modal-delete-user">
                   <span class="icon is-small">
                     <i class="fa-solid fa-trash"></i>
                   </span>
-                    <span>Delete</span>
-                  </button>
-                </p>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <figure class="image is-48x48">
-                <img class="is-rounded" src="images/profile.jpg">
-              </figure>
-            </td>
-            <td>CMI2</td>
-            <td>Royse225</td>
-            <td>
+                        <span>Delete</span>
+                      </button>
+                    </p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <figure class="image is-48x48">
+                    <img class="is-rounded" src="images/profile.jpg">
+                  </figure>
+                </td>
+                <td>CMI2</td>
+                <td>Royse225</td>
+                <td>
 
-              <span style="margin-left: 3px">Mbah Royce Chum</span>
-            </td>
-            <td>Communal agent</td>
-            <td>Information system cell</td>
-            <td>
-              <div class="field has-addons">
-                <p class="control">
-                  <a href="user_info.html" class="button is-info is-outlined">
+                  <span style="margin-left: 3px">Mbah Royce Chum</span>
+                </td>
+                <td>Communal agent</td>
+                <td>Information system cell</td>
+                <td>
+                  <div class="field has-addons">
+                    <p class="control">
+                      <a href="user_info.html" class="button is-info is-outlined">
                   <span class="icon is-small">
                     <i class="fa-solid fa-eye"></i>
                   </span>
-                    <span>View</span>
-                  </a>
-                </p>
-                <p class="control">
-                  <a href="user_edit.html" class="button is-link is-outlined">
+                        <span>View</span>
+                      </a>
+                    </p>
+                    <p class="control">
+                      <a href="user_edit.html" class="button is-link is-outlined">
                   <span class="icon is-small">
                     <i class="fa-solid fa-user-edit"></i>
                   </span>
-                    <span>Edit</span>
-                  </a>
-                </p>
-                <p class="control">
-                  <button class="button is-danger is-outlined js-modal-trigger" data-target="modal-delete-user">
+                        <span>Edit</span>
+                      </a>
+                    </p>
+                    <p class="control">
+                      <button class="button is-danger is-outlined js-modal-trigger" data-target="modal-delete-user">
                   <span class="icon is-small">
                     <i class="fa-solid fa-trash"></i>
                   </span>
-                    <span>Delete</span>
-                  </button>
-                </p>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <figure class="image is-48x48">
-                <img class="is-rounded" src="images/profile.jpg">
-              </figure>
-            </td>
-            <td>CMI2</td>
-            <td>Royse225</td>
-            <td>
+                        <span>Delete</span>
+                      </button>
+                    </p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <figure class="image is-48x48">
+                    <img class="is-rounded" src="images/profile.jpg">
+                  </figure>
+                </td>
+                <td>CMI2</td>
+                <td>Royse225</td>
+                <td>
 
-              <span style="margin-left: 3px">Mbah Royce Chum</span>
-            </td>
-            <td>Communal agent</td>
-            <td>Information system cell</td>
-            <td>
-              <div class="field has-addons">
-                <p class="control">
-                  <a href="user_info.html" class="button is-info is-outlined">
+                  <span style="margin-left: 3px">Mbah Royce Chum</span>
+                </td>
+                <td>Communal agent</td>
+                <td>Information system cell</td>
+                <td>
+                  <div class="field has-addons">
+                    <p class="control">
+                      <a href="user_info.html" class="button is-info is-outlined">
                   <span class="icon is-small">
                     <i class="fa-solid fa-eye"></i>
                   </span>
-                    <span>View</span>
-                  </a>
-                </p>
-                <p class="control">
-                  <a href="user_edit.html" class="button is-link is-outlined">
+                        <span>View</span>
+                      </a>
+                    </p>
+                    <p class="control">
+                      <a href="user_edit.html" class="button is-link is-outlined">
                   <span class="icon is-small">
                     <i class="fa-solid fa-user-edit"></i>
                   </span>
-                    <span>Edit</span>
-                  </a>
-                </p>
-                <p class="control">
-                  <button class="button is-danger is-outlined js-modal-trigger" data-target="modal-delete-user">
+                        <span>Edit</span>
+                      </a>
+                    </p>
+                    <p class="control">
+                      <button class="button is-danger is-outlined js-modal-trigger" data-target="modal-delete-user">
                   <span class="icon is-small">
                     <i class="fa-solid fa-trash"></i>
                   </span>
-                    <span>Delete</span>
-                  </button>
-                </p>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <figure class="image is-48x48">
-                <img class="is-rounded" src="images/profile.jpg">
-              </figure>
-            </td>
-            <td>CMI2</td>
-            <td>Royse225</td>
-            <td>
+                        <span>Delete</span>
+                      </button>
+                    </p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <figure class="image is-48x48">
+                    <img class="is-rounded" src="images/profile.jpg">
+                  </figure>
+                </td>
+                <td>CMI2</td>
+                <td>Royse225</td>
+                <td>
 
-              <span style="margin-left: 3px">Mbah Royce Chum</span>
-            </td>
-            <td>Communal agent</td>
-            <td>Information system cell</td>
-            <td>
-              <div class="field has-addons">
-                <p class="control">
-                  <a href="user_info.html" class="button is-info is-outlined">
+                  <span style="margin-left: 3px">Mbah Royce Chum</span>
+                </td>
+                <td>Communal agent</td>
+                <td>Information system cell</td>
+                <td>
+                  <div class="field has-addons">
+                    <p class="control">
+                      <a href="user_info.html" class="button is-info is-outlined">
                   <span class="icon is-small">
                     <i class="fa-solid fa-eye"></i>
                   </span>
-                    <span>View</span>
-                  </a>
-                </p>
-                <p class="control">
-                  <a href="user_edit.html" class="button is-link is-outlined">
+                        <span>View</span>
+                      </a>
+                    </p>
+                    <p class="control">
+                      <a href="user_edit.html" class="button is-link is-outlined">
                   <span class="icon is-small">
                     <i class="fa-solid fa-user-edit"></i>
                   </span>
-                    <span>Edit</span>
-                  </a>
-                </p>
-                <p class="control">
-                  <button class="button is-danger is-outlined js-modal-trigger" data-target="modal-delete-user">
+                        <span>Edit</span>
+                      </a>
+                    </p>
+                    <p class="control">
+                      <button class="button is-danger is-outlined js-modal-trigger" data-target="modal-delete-user">
                   <span class="icon is-small">
                     <i class="fa-solid fa-trash"></i>
                   </span>
-                    <span>Delete</span>
-                  </button>
-                </p>
-              </div>
-            </td>
-          </tr>
-          </tbody>
-        </table>
+                        <span>Delete</span>
+                      </button>
+                    </p>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
+
     </section>
 
     <!-- navigation panel -->
