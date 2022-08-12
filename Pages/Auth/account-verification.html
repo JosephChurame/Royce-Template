@@ -2,49 +2,53 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>My first Bulma website</title>
-    <link rel="stylesheet" href="../../node_modules/bulma/css/bulma.min.css">
-    <link rel="stylesheet" href="../../node_modules/bulma-extensions/bulma-divider/dist/css/bulma-divider.min.css">
-    <link rel="stylesheet" href="../../node_modules/bulma-extensions/bulma-tagsinput/dist/css/bulma-tagsinput.min.css">
-    <link rel="stylesheet" href="../../node_modules/bulma-extensions/bulma-checkradio/dist/css/bulma-checkradio.min.css">
-    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css">
-    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/brands.css">
-    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/solid.css">
-    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/regular.css">
-
+    <link rel="stylesheet" href="../../node_modules/bulma/css/bulma.min.css" />
+    <link rel="stylesheet" href="../../node_modules/bulma-extensions/bulma-divider/dist/css/bulma-divider.min.css" />
+    <link rel="stylesheet" href="../../node_modules/bulma-extensions/bulma-tagsinput/dist/css/bulma-tagsinput.min.css" />
+    <link rel="stylesheet" href="../../node_modules/bulma-extensions/bulma-checkradio/dist/css/bulma-checkradio.min.css" />
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css" />
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/brands.css" />
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/solid.css" />
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/regular.css" />
 </head>
 
 <body>
-    <div class="container " style="width:18rem; margin-top:70px">
+    <div class="container" style="width: 20rem; margin-top: 70px">
         <form class="box">
             <article class="message is-link">
                 <div class="message-body">
-                    Enter the code you received below
+                    Enter the code you received below.
+                    <strong> Otp code expires after 20minutes</strong>
                 </div>
             </article>
             <div class="field">
                 <label class="label">Code</label>
                 <div class="control has-icons-left">
-                    <input class="input" type="text" placeholder="12hfgs7QW">
+                    <input class="input" type="text" placeholder="12hfgs7QW" />
                     <span class="icon is-small is-left">
-                        <i class="fa-solid fa-fingerprint"></i>
-                    </span>
+                        <i class="fa-solid fa-key"></i> </span>
                 </div>
-                <p class="help">Otp Code</p>
+                <div class="columns py-3 is-variable is-4">
+                    <div class="column">
+                        <p class="help">Otp Code</p>
+                    </div>
+                    <div class="column">
+                        <p class="control">
+                            <a class="button is-link is-small"> Resend Code </a>
+                        </p>
+                    </div>
+                </div>
             </div>
 
-            <div class="field is-grouped is-grouped-centered py-3">
+            <div class="field is-grouped is-grouped-centered py-4">
                 <p class="control">
-                    <a class="button is-primary">
-                        Verify
-                    </a>
+                    <a class="button is-primary"> Verify </a>
                 </p>
             </div>
-
-            <a class="is-underlined">Resend Code</a>
         </form>
     </div>
 </body>
