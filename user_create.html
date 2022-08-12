@@ -14,11 +14,12 @@
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/brands.css">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/solid.css">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/regular.css">
+    <link rel="stylesheet" href="node_modules/bulma-extensions/bulma-accordion/dist/css/bulma-accordion.min.css">
 
     <script src="node_modules/bulma-extensions/bulma-tagsinput/dist/js/bulma-tagsinput.min.js"></script>
     <style>
-        div.input[type="tags"] > * {
-            border: transparent!important;
+        div.input[type="tags"]>* {
+            border: transparent !important;
         }
     </style>
 
@@ -116,10 +117,10 @@
                                     <div class="control has-icons-left has-icons-right">
                                         <input class="input" type="email" placeholder="Normal">
                                         <span class="icon is-left">
-                                          <i class="fa-solid fa-envelope"></i>
+                                            <i class="fa-solid fa-envelope"></i>
                                         </span>
                                         <span class="icon is-right">
-                                          <i class="fas fa-check"></i>
+                                            <i class="fas fa-check"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -137,7 +138,7 @@
                                             <input class="input" type="tags" placeholder="Your phone number">
                                         </p>
                                         <span class="icon is-left">
-                                          <i class="fas fa-phone"></i>
+                                            <i class="fas fa-phone"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -241,6 +242,21 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="field is-horizontal">
+                            <div class="field-label is-normal">
+                                <label class="label">Permissions</label>
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <a class="button is-primary js-modal-trigger" data-target="modal-permssions-setter">Set up permissions</a>
+                                    </div>
+                                    <p class="help is-danger">
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="column is-4">
@@ -256,15 +272,15 @@
                                 <label class="file-label">
                                     <input class="file-input" type="file" name="resume">
                                     <span class="file-cta">
-                                      <span class="file-icon">
-                                        <i class="fas fa-upload"></i>
-                                      </span>
-                                      <span class="file-label">
-                                        Choose a file…
-                                      </span>
+                                        <span class="file-icon">
+                                            <i class="fas fa-upload"></i>
+                                        </span>
+                                        <span class="file-label">
+                                            Choose a file…
+                                        </span>
                                     </span>
                                     <span class="file-name">
-                                          Screen Shot 2017-07-29 at 15.54.25.png
+                                        Screen Shot 2017-07-29 at 15.54.25.png
                                     </span>
                                 </label>
                             </div>
@@ -278,9 +294,9 @@
                                 <div class="card-content">
                                     <div class="media">
                                         <div class="media-left">
-                                                <span class="icon is-large">
-                                                    <i class="fa-solid fa-image-portrait"></i>
-                                                </span>
+                                            <span class="icon is-large">
+                                                <i class="fa-solid fa-image-portrait"></i>
+                                            </span>
                                         </div>
                                         <div class="media-content">
                                             <p class="title is-6">JScreen Shot 2017-07-29 at 15.54.25.png</p>
@@ -463,6 +479,137 @@
         </div>
     </div>
 
+    <div id="modal-permssions-setter" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Permission Manager</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <!-- Content ... -->
+                <section class="accordions is-primary">
+                    <article class="accordion is-active">
+                        <div class="accordion-header toggle is-primary">
+                            <p>Messaging Permission</p>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <div class="columns">
+                                    <div class="column">
+                                        <label class="checkbox">
+                                            <input type="checkbox" checked>
+                                            Receive Messages
+                                        </label>
+                                    </div>
+                                    <div class="column">
+                                        <label class="checkbox">
+                                            <input type="checkbox" checked>
+                                            Send Messages
+                                        </label>
+                                    </div>
+                                    <div class="column">
+                                        <label class="checkbox">
+                                            <input type="checkbox">
+                                            Redirect Call
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="accordion is-active">
+                        <div class="accordion-header">
+                            <p>Call Permission</p>
+                            <button class="toggle" aria-label="toggle"></button>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <div class="columns">
+                                    <div class="column">
+                                        <label class="checkbox">
+                                            <input type="checkbox" checked>
+                                            Receive Calls
+                                        </label>
+                                    </div>
+                                    <div class="column">
+                                        <label class="checkbox">
+                                            <input type="checkbox" checked>
+                                            Make Call
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="accordion is-active">
+                        <div class="accordion-header">
+                            <p>User Permission</p>
+                            <button class="toggle" aria-label="toggle"></button>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <div class="columns">
+                                    <div class="column">
+                                        <label class="checkbox">
+                                            <input type="checkbox">
+                                            Recieve Notification
+                                        </label>
+                                    </div>
+                                    <div class="column">
+                                        <label class="checkbox">
+                                            <input type="checkbox">
+                                            Send Notifications
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="accordion is-active">
+                        <div class="accordion-header">
+                            <p>User Permission</p>
+                            <button class="toggle" aria-label="toggle"></button>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <div class="columns">
+                                    <div class="column">
+                                        <label class="checkbox">
+                                            <input type="checkbox">
+                                            Create User Accounts
+                                        </label>
+                                    </div>
+                                    <div class="column">
+                                        <label class="checkbox">
+                                            <input type="checkbox">
+                                            Update User Accounts
+                                        </label>
+                                    </div>
+                                    <div class="column">
+                                        <label class="checkbox">
+                                            <input type="checkbox">
+                                            Delete User Accounts
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success">
+                    <span class="icon">
+                        <i class="fa-solid fa-save"></i>
+                    </span>
+                    <span>Save changes</span>
+                </button>
+                <button class="button">Cancel</button>
+            </footer>
+        </div>
+    </div>
+
     <script>
         bulmaTagsinput.attach();
     </script>
@@ -496,7 +643,7 @@
             });
 
             // Add a click event on various child elements to close the parent modal
-            (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+            (document.querySelectorAll('.modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
                 const $target = $close.closest('.modal');
 
                 $close.addEventListener('click', () => {
@@ -514,7 +661,6 @@
             });
         });
     </script>
-
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script> -->
 
 </body>
