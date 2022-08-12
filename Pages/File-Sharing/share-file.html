@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <div class="container" style="width: 21rem; margin-top:70px">
+    <div class="container" style="width: 23rem; margin-top:70px">
         <form class="box" style="margin: auto;">
             <h5 class="title  is-center has-text-centered">Share File
                 <span>
@@ -29,10 +29,9 @@
             <div class="field">
                 <label class="label">Title</label>
                 <div class="control has-icons-left">
-                    <input class="input " type="text" placeholder="Royce123">
+                    <input class="input " type="text" placeholder="Notice">
                     <span class="icon is-small is-left">
-                        <i class="fas fa-user"></i>
-                    </span>
+                        <i class="fa-solid fa-file-signature"></i> </span>
                 </div>
                 <p class="help">Name of file to be shared</p>
             </div>
@@ -59,28 +58,26 @@
                 </div>
             </div>
 
-            <div class="field is-grouped is-grouped-centered py-3">
+            <div class="field is-grouped is-grouped-centered py-4">
                 <p class="control">
                     <a class="button is-primary">
-                        Login
+                        Send
                     </a>
                 </p>
             </div>
-
-            <a class="is-underlined">Forgot Password?</a>
         </form>
     </div>
 
     <!--- Modal -->
-    <div class="modal">
+    <div class="modal" style="width: auto-fit;">
         <div class="modal-background"></div>
-        <div class="modal-card">
+        <div class="modal-card" style="height: 60%;width:fit-content">
             <header class="modal-card-head">
-                <p class="modal-card-title">Modal title</p>
+                <p class="modal-card-title has-text-centered">Choose Destination</p>
                 <button class="delete" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
-                <div class="tabs is-boxed ">
+                <div class="tabs is-boxed is-centered">
                     <ul>
                         <li class="is-active" data-target="group-list">
                             <a>
@@ -99,16 +96,36 @@
                 </div>
                 <div id="tab-content">
                     <div class="field" id="group-list">
-                        <label class="label">Groups</label>
-                        <div class="control has-icons-left">
-                            <input class="input is-normal" type="text" placeholder="e.g. CYK123Y">
-                            <span class="icon is-small is-left">
-                                <i class="fa-solid fa-id-badge"></i>
-                            </span>
-                        </div>
+                            <div class="control has-icons-left is-half">
+                                <input class="input is-primary" type="text" placeholder="Search">
+                                <span class="icon is-left">
+                                    <i class="fas fa-search" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <div class="dropdown py-1 is-active">
+                                <div class="dropdown-trigger">
+                                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+                                        <span>Choose Users</span>
+                                        <span class="icon is-small">
+                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+                                    <div class="dropdown-content">
+                                        <a href="#" class="dropdown-item">
+                                            Overview
+                                        </a>
+                                        <hr class="dropdown-divider">
+                                        <a href="#" class="dropdown-item">
+                                            More
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
                     <div class="field is-hidden" id="user-list">
-                        <div class="dropdown">
+                        <div class="dropdown ">
                             <div class="dropdown-trigger">
                                 <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
                                     <span>Choose Users</span>
