@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="node_modules/bulma-extensions/bulma-accordion/dist/css/bulma-accordion.min.css">
 
     <script src="node_modules/bulma-extensions/bulma-tagsinput/dist/js/bulma-tagsinput.min.js"></script>
+    <script src="node_modules/bulma-extensions/bulma-accordion/dist/js/bulma-accordion.min.js"></script>
     <style>
         div.input[type="tags"]>* {
             border: transparent !important;
@@ -28,7 +29,6 @@
 <body>
     <!-- Modal Block-->
     <div class="container my-6">
-
         <div class="box">
             <h2 class="title is-2">CREATE USER</h2>
             <div class="is-divider"></div>
@@ -88,7 +88,6 @@
                                             <input class="input" type="date" placeholder="Your date of birth">
                                         </p>
                                     </div>
-                                    <p class="help is-info">Do not enter the first zero</p>
                                 </div>
                             </div>
                         </div>
@@ -100,10 +99,10 @@
                             </div>
                             <div class="field-body">
                                 <div class="field">
-                                    <input class="is-checkradio" id="exampleRadioInline1" type="radio" name="exampleRadioInline" checked="checked">
-                                    <label for="exampleRadioInline1">Male</label>
-                                    <input class="is-checkradio" id="exampleRadioInline2" type="radio" name="exampleRadioInline">
-                                    <label for="exampleRadioInline2">Femele</label>
+                                    <input class="is-checkradio" id="gender-male" type="radio" name="gender" checked="checked">
+                                    <label for="gender-male">Male</label>
+                                    <input class="is-checkradio" id="gender-femele" type="radio" name="gender">
+                                    <label for="gender-femele">Femele</label>
                                 </div>
                             </div>
                         </div>
@@ -164,7 +163,6 @@
                                             <input class="input" type="text" placeholder="Enter your address">
                                         </p>
                                     </div>
-                                    <p class="help is-info">Do not enter the first zero</p>
                                 </div>
                             </div>
                         </div>
@@ -220,10 +218,15 @@
                                             <option>With options</option>
                                         </select>
                                     </div>
-                                    <p class="help is-danger">
-                                        This field is required
-                                    </p>
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="field is-horizontal">
+                            <div class="field-label is-normal">
+                            </div>
+                            <div class="field-body">
+                                <div class="is-divider"></div>
                             </div>
                         </div>
 
@@ -236,23 +239,23 @@
                                     <div class="control">
                                         <a class="button is-primary js-modal-trigger" data-target="modal-account-setter">Set up state</a>
                                     </div>
-                                    <p class="help is-danger">
-                                        This field is required
+                                    <p class="help is-info">
+                                        This option will determine how the user can access the platform.
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div class="field is-horizontal">
                             <div class="field-label is-normal">
-                                <label class="label">Permissions</label>
+                                <label class="label">User permissions</label>
                             </div>
                             <div class="field-body">
                                 <div class="field">
                                     <div class="control">
                                         <a class="button is-primary js-modal-trigger" data-target="modal-permssions-setter">Set up permissions</a>
                                     </div>
-                                    <p class="help is-danger">
-
+                                    <p class="help is-warning">
+                                        This option will determine the user's access rights.
                                     </p>
                                 </div>
                             </div>
@@ -488,111 +491,84 @@
             </header>
             <section class="modal-card-body">
                 <!-- Content ... -->
-                <section class="accordions is-primary">
+                <section class="accordions">
                     <article class="accordion is-active">
-                        <div class="accordion-header toggle is-primary">
+                        <div class="accordion-header toggle">
                             <p>Messaging Permission</p>
                         </div>
                         <div class="accordion-body">
                             <div class="accordion-content">
-                                <div class="columns">
-                                    <div class="column">
-                                        <label class="checkbox">
-                                            <input type="checkbox" checked>
-                                            Receive Messages
-                                        </label>
-                                    </div>
-                                    <div class="column">
-                                        <label class="checkbox">
-                                            <input type="checkbox" checked>
-                                            Send Messages
-                                        </label>
-                                    </div>
-                                    <div class="column">
-                                        <label class="checkbox">
-                                            <input type="checkbox">
-                                            Redirect Call
-                                        </label>
-                                    </div>
+                                <div class="field">
+                                    <input class="is-checkradio" id="receive-message-permission" type="checkbox" name="receive-message-permission">
+                                    <label for="receive-message-permission">Receive Messages</label>
+                                    <input class="is-checkradio" id="send-message-permission" type="checkbox" name="send-message-permission">
+                                    <label for="send-message-permission">Send Messages</label>
                                 </div>
                             </div>
                         </div>
                     </article>
-                    <article class="accordion is-active">
+
+                    <article class="accordion">
                         <div class="accordion-header">
-                            <p>Call Permission</p>
+                            <p>Notification Permissions</p>
                             <button class="toggle" aria-label="toggle"></button>
                         </div>
                         <div class="accordion-body">
                             <div class="accordion-content">
-                                <div class="columns">
-                                    <div class="column">
-                                        <label class="checkbox">
-                                            <input type="checkbox" checked>
-                                            Receive Calls
-                                        </label>
-                                    </div>
-                                    <div class="column">
-                                        <label class="checkbox">
-                                            <input type="checkbox" checked>
-                                            Make Call
-                                        </label>
-                                    </div>
+                                <div class="field">
+                                    <input class="is-checkradio" id="receive-notification-permission" type="checkbox" name="receive-notification-permission">
+                                    <label for="receive-notification-permission">Receive Notifications</label>
+                                    <input class="is-checkradio" id="send-notification-permission" type="checkbox" name="send-notification-permission">
+                                    <label for="send-notification-permission">Send Notifications</label>
                                 </div>
                             </div>
                         </div>
                     </article>
-                    <article class="accordion is-active">
+
+                    <article class="accordion">
                         <div class="accordion-header">
-                            <p>User Permission</p>
+                            <p>File Management Permissions</p>
                             <button class="toggle" aria-label="toggle"></button>
                         </div>
                         <div class="accordion-body">
                             <div class="accordion-content">
-                                <div class="columns">
-                                    <div class="column">
-                                        <label class="checkbox">
-                                            <input type="checkbox">
-                                            Recieve Notification
-                                        </label>
-                                    </div>
-                                    <div class="column">
-                                        <label class="checkbox">
-                                            <input type="checkbox">
-                                            Send Notifications
-                                        </label>
-                                    </div>
+                                <div class="field">
+                                    <input class="is-checkradio" id="receive-file-permission" type="checkbox" name="receive-file-permission">
+                                    <label for="receive-file-permission">Receive Files</label>
+                                    <input class="is-checkradio" id="send-file-permission" type="checkbox" name="send-file-permission">
+                                    <label for="send-file-permission">Send Files</label>
                                 </div>
                             </div>
                         </div>
                     </article>
-                    <article class="accordion is-active">
+
+                    <article class="accordion">
                         <div class="accordion-header">
-                            <p>User Permission</p>
+                            <p>Call Permissions</p>
                             <button class="toggle" aria-label="toggle"></button>
                         </div>
                         <div class="accordion-body">
                             <div class="accordion-content">
-                                <div class="columns">
-                                    <div class="column">
-                                        <label class="checkbox">
-                                            <input type="checkbox">
-                                            Create User Accounts
-                                        </label>
-                                    </div>
-                                    <div class="column">
-                                        <label class="checkbox">
-                                            <input type="checkbox">
-                                            Update User Accounts
-                                        </label>
-                                    </div>
-                                    <div class="column">
-                                        <label class="checkbox">
-                                            <input type="checkbox">
-                                            Delete User Accounts
-                                        </label>
-                                    </div>
-                                </div>
+                                <input class="is-checkradio" id="receive-call-permission" type="checkbox" name="receive-call-permission">
+                                <label for="receive-call-permission">Receive Calls</label>
+                                <input class="is-checkradio" id="make-call-permission" type="checkbox" name="make-call-permission">
+                                <label for="make-call-permission">Make Calls</label>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="accordion">
+                        <div class="accordion-header">
+                            <p>User Management Permissions</p>
+                            <button class="toggle" aria-label="toggle"></button>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <input class="is-checkradio" id="create-user-permission" type="checkbox" name="create-user-permission">
+                                <label for="create-user-permission">Create User</label>
+                                <input class="is-checkradio" id="update-user-info-permission" type="checkbox" name="update-user-info-permission">
+                                <label for="update-user-info-permission">Update User Information</label>
+                                <input class="is-checkradio" id="delete-user-permission" type="checkbox" name="delete-user-permission">
+                                <label for="delete-user-permission">Delete User</label>
                             </div>
                         </div>
                     </article>
@@ -613,6 +589,12 @@
     <script>
         bulmaTagsinput.attach();
     </script>
+
+    <script>
+        var accordions = bulmaAccordion.attach();
+    </script>
+
+
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {

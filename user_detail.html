@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Create User</title>
+    <title>User details</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
     <link rel="stylesheet" href="node_modules/bulma-extensions/bulma-divider/dist/css/bulma-divider.min.css">
@@ -26,109 +26,88 @@
 </head>
 
 <body>
-    <div class="container py-5">
-        <article class="media">
+    <div class="container my-5">
+        <h2 class="title is-2">User details</h2>
+        <p class="subtitle is-4">@Royce123 informations</p>
+        <div class="is-divider"></div>
         <div class="container">
-                <div class="media-content">
-                    <div class="content">
-                        <div class="columns">
-                            <div class="column">
-                                Username:
-                            </div>
-                            <div class="column">
-                                Royce123
-                            </div>
+            <div class="columns">
+                <div class="column">
+                    <div class="field is-horizontal">
+                        <div class="field-label">
+                            <label class="label">Username:</label>
                         </div>
-                        <div class="columns">
-                            <div class="column">
-                                Fist Name:
+                        <div class="field-body">Royce123</div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="container">
+                        <h4 class="title is-4">Image profile</h4>
+                        <article class="message is-primary">
+                            <div class="message-body">
+                                You must choose the user image profile, however there is a default image.
                             </div>
-                            <div class="column">
-                                Royce123
-                            </div>
+                        </article>
+
+                        <div class="file has-name">
+                            <label class="file-label">
+                                <input class="file-input" type="file" name="resume">
+                                <span class="file-cta">
+                                        <span class="file-icon">
+                                            <i class="fas fa-upload"></i>
+                                        </span>
+                                        <span class="file-label">
+                                            Choose a file…
+                                        </span>
+                                    </span>
+                                <span class="file-name">
+                                        Screen Shot 2017-07-29 at 15.54.25.png
+                                    </span>
+                            </label>
                         </div>
-                        <div class="columns">
-                            <div class="column">
-                                Last Name:
+
+                        <div class="card mt-4">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="images/profile.jpg" alt="Image profile">
+                                </figure>
                             </div>
-                            <div class="column">
-                                Royce123
-                            </div>
-                        </div>
-                        <div class="columns">
-                            <div class="column">
-                                Designation:
-                            </div>
-                            <div class="column">
-                                Royce123
-                            </div>
-                        </div>
-                        <div class="columns">
-                            <div class="column">
-                                :
-                            </div>
-                            <div class="column">
-                                Royce123
-                            </div>
-                        </div>
-                        <div class="columns">
-                            <div class="column">
-                                Username:
-                            </div>
-                            <div class="column">
-                                Royce123
-                            </div>
-                        </div>
-                        <div class="columns">
-                            <div class="column">
-                                Username:
-                            </div>
-                            <div class="column">
-                                Royce123
-                            </div>
-                        </div>
-                        <div class="columns">
-                            <div class="column">
-                                Username:
-                            </div>
-                            <div class="column">
-                                Royce123
-                            </div>
-                        </div>
-                        <div class="columns">
-                            <div class="column">
-                                Username:
-                            </div>
-                            <div class="column">
-                                Royce123
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                            <span class="icon is-large">
+                                                <i class="fa-solid fa-image-portrait"></i>
+                                            </span>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-6">JScreen Shot 2017-07-29 at 15.54.25.png</p>
+                                        <p class="subtitle is-6">size: 45865 kb</p>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    <div class="buttons">
+                                        <button class="button is-primary is-light">
+                                                <span class="icon">
+                                                    <i class="fa-solid fa-edit"></i>
+                                                </span>
+                                            <span>Change</span>
+                                        </button>
+                                        <button class="button is-danger is-light">
+                                                <span class="icon">
+                                                    <i class="fa-solid fa-trash"></i>
+                                                </span>
+                                            <span>Delete</span>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <nav class="level is-mobile">
-                        <div class="level-left">
-                            <a class="level-item button">
-                                <span class="icon is-small"><i class="fas fa-reply"></i></span>
-                            </a>
-                            <a class="level-item button">
-                                <span class="icon is-small"><i class="fas fa-retweet"></i></span>
-                            </a>
-                            <a class="level-item button">
-                                <span class="icon is-small"><i class="fas fa-heart"></i></span>
-                            </a>
-                        </div>
-                    </nav>
                 </div>
             </div>
-            <figure class="media-right">
-                <p class="image is-50x50">
-                    <img src="/images/profile.jpg">
-                </p>
-            </figure>
+        </div>
 
-            <!-- <div class="media-right">
-                <button class="delete"></button>
-            </div> -->
-        </article>
     </div>
 </body>
 
