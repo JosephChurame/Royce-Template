@@ -16,6 +16,11 @@
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/regular.css">
 
     <script src="node_modules/bulma-extensions/bulma-tagsinput/dist/js/bulma-tagsinput.min.js"></script>
+    <style>
+        div.input[type="tags"] > * {
+            border: transparent!important;
+        }
+    </style>
 
 </head>
 
@@ -127,20 +132,18 @@
                             </div>
                             <div class="field-body">
                                 <div class="field">
-                                    <div class="control has-icons-left has-icons-right">
+                                    <div class="control has-icons-left">
                                         <p class="control is-expanded" style="max-width: 700px!important;">
                                             <input class="input" type="tags" placeholder="Your phone number">
                                         </p>
                                         <span class="icon is-left">
                                           <i class="fas fa-phone"></i>
                                         </span>
-                                        <span class="icon is-right">
-                                          <i class="fas fa-check"></i>
-                                        </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
 
                         <div class="field is-horizontal mt-5">
                             <div class="field-label">
@@ -151,9 +154,9 @@
                                     <div class="field has-addons">
                                         <p class="control">
                                             <a class="button is-static">
-                                                    <span class="icon">
-                                                        <i class="fa-solid fa-location-dot"></i>
-                                                    </span>
+                                                <span class="icon">
+                                                    <i class="fa-solid fa-location-dot"></i>
+                                                </span>
                                             </a>
                                         </p>
                                         <p class="control is-expanded">
