@@ -4,70 +4,369 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Send notification</title>
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css" />
+    <link rel="stylesheet" href="node_modules/bulma-extensions/bulma-divider/dist/css/bulma-divider.min.css" />
+    <link rel="stylesheet" href="node_modules/bulma-extensions/bulma-tagsinput/dist/css/bulma-tagsinput.min.css" />
+    <link rel="stylesheet" href="node_modules/bulma-extensions/bulma-checkradio/dist/css/bulma-checkradio.min.css" />
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.css" />
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/brands.css" />
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/solid.css" />
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/regular.css" />
+
+    <script src="node_modules/bulma-extensions/bulma-tagsinput/dist/js/bulma-tagsinput.min.js"></script>
+    <script src="node_modules/tinymce/tinymce.min.js"></script>
+
+    <script>
+        tinymce.init({
+            selector: '#notification-description',
+            placeholder: 'Notification description',
+            plugins: [ 'advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'preview', 'table', 'searchreplace', 'media', 'emoticons', 'insertdatetime'],
+            toolbar: [
+                'undo redo styles bold italic alignleft aligncenter alignright alignjustify ' +
+                '| emoticons | bullist numlist outdent indent | link image media insertdatetime | table | searchreplace'
+            ],
+            toolbar_mode: 'sliding',
+            insertdatetime_dateformat: [ '%H:%M:%S', '%Y-%m-%d', '%I:%M:%S %p', '%D' ],
+            advlist_bullet_styles: 'default,circle,disc,square'
+        });
+    </script>
 
 </head>
 
 <body>
-    <div class="card" style="width:fit-content;">
-        <div class="card-body">
-            <h5 class="card-title mb-3 text-center">Administrative Notification <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
-                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
-                        </svg></h5>
-            <form>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">Title</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div class="container my-4">
+        <h2 class="title is-2">Send notification</h2>
+        <div class="is-divider"></div>
+
+        <article class="message is-info mx-4">
+            <div class="message-header">
+                <p>Info</p>
+                <button class="delete" aria-label="delete"></button>
+            </div>
+            <div class="message-body">
+                Send an informative message to the right person.
+            </div>
+        </article>
+        <div class="container mx-4">
+            <form action="">
+                <div class="field is-horizontal">
+                    <div class="field-label">
+                        <label for="notification-destination" class="label is-normal">Destination</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="columns">
+                                <div class="column">
+                                    <div class="control">
+                                        <input id="notification-destination" class="input is-link" type="tags" placeholder="e.g. @Mbah-Royce">
+                                    </div>
+                                    <p class="help is-info mt-4">
+                                        <span class="icon">
+                                            <i class="fa-solid fa-circle-exclamation"></i>
+                                        </span>
+                                        <span>To choose receiver you must click on choose button beside, and choose users or user groups.</span>
+                                    </p>
+                                </div>
+                                <div class="column is-2">
+                                    <a class="button is-primary is-small is-light js-modal-trigger" data-target="modal-users-destination">
+                                        <span class="icon">
+                                            <i class="fa-solid fa-list-check"></i>
+                                        </span>
+                                        <span>Choose</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+                <div class="field is-horizontal">
+                    <div class="field-label">
+                        <label for="notification-object" class="label is-normal">Object</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control">
+                                <input id="notification-object" class="input" type="text" placeholder="e.g. Deliberations in KUC">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div id="profile-container" style="width:fit-content;">
-                        
+
+                <div class="field is-horizontal">
+                    <div class="field-label">
+                        <label for="notification-description" class="label is-normal">Description <em>(optional)</em></label>
                     </div>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Attachment</label>
-                        <input type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="mb-3">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Select Reciever</option>
-                                <option value="1">ALL</option>
-                                <option value="2">Service Technique</option>
-                                <option value="3">Cellule De Project</option>
-                            </select>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control">
+                                <textarea id="notification-description" class="textarea" placeholder="Notification message"></textarea>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row mt-3">
-                    <div class="col d-flex justify-content-center">
-                        <button type="submit" class="btn btn-danger">Reset</button>
+
+                <div class="field is-horizontal my-4">
+                    <div class="field-label">
+                        <label for="notification-attachment" class="label is-normal">Attachment</label>
                     </div>
-                    <div class="col d-flex justify-content-center">
-                        <button type="submit" class="btn btn-success">Send</button>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="columns">
+                                <div class="column is-3">
+                                    <div class="control">
+                                        <div class="file is-primary is-boxed">
+                                            <label class="file-label">
+                                                <input id="notification-attachment" class="file-input" type="file" name="resume">
+                                                <span class="file-cta">
+                                                <span class="file-icon">
+                                                    <i class="fas fa-cloud-upload-alt"></i>
+                                                </span>
+                                                <span class="file-label">
+                                                    Select files ...
+                                                </span>
+                                            </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <p class="help is-danger mt-4">
+                                        This field is required.
+                                    </p>
+                                </div>
+                                <div class="column">
+                                    <aside class="menu">
+                                        <p class="menu-label">
+                                            file list (2)
+                                        </p>
+                                        <ul class="menu-list">
+                                            <li>
+                                                <a>
+                                                    <div class="columns is-vcentered is-gapless m-0 mt-1" style="width: 100%;">
+                                                        <div class="column" style="flex:none;">
+                                                            <figure class="image is-32x32 mt-0 mb-0">
+                                                                <img class="lazyload" src="/images/file-format-icon/acrobat.png">
+                                                            </figure>
+                                                        </div>
+                                                        <div class="column ml-2 is-flex-grow-5" style="flex: auto;width: 100%;">
+                                                            <span><strong>Joseph.pdf</strong> - <em>45868 kb</em></span>
+                                                        </div>
+                                                        <div class="column">
+                                                            <button class="button is-danger is-light">
+                                                                <span class="icon" style="flex:none;">
+                                                                    <i class="fa-solid fa-trash-alt" aria-hidden="true"></i>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a>
+                                                    <div class="columns is-vcentered is-gapless m-0 mt-1" style="width: 100%;">
+                                                        <div class="column" style="flex:none;">
+                                                            <figure class="image is-32x32 mt-0 mb-0">
+                                                                <img class="lazyload" src="/images/file-format-icon/zip.png">
+                                                            </figure>
+                                                        </div>
+                                                        <div class="column ml-2 is-flex-grow-5" style="flex: auto;width: 100%;">
+                                                            <span><strong>joseph.zip</strong> - <em>68 kb</em></span>
+                                                        </div>
+                                                        <div class="column">
+                                                            <button class="button is-danger is-light">
+                                                                <span class="icon" style="flex:none;">
+                                                                    <i class="fa-solid fa-trash-alt" aria-hidden="true"></i>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </aside>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
+
+                <div class="field is-horizontal mt-6">
+                    <div class="field-label"></div>
+                    <div class="field-body">
+                        <div class="field is-grouped is-grouped-right">
+                            <p class="control">
+                                <a class="button is-primary js-modal-trigger" data-target="send-file-confirmation">
+                                    Submit
+                                </a>
+                            </p>
+                            <p class="control">
+                                <button type="reset" class="button is-light">
+                                    Cancel
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </form>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <!--- Modal -->
+    <div id="modal-users-destination" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title has-text-centered">Manage destinations</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <div class="tabs-with-content">
+                    <div class="tabs is-boxed">
+                        <ul>
+                            <li class="is-active">
+                                <a>
+                                        <span class="icon">
+                                            <i class="fa-solid fa-people-group"></i>
+                                        </span>
+                                    <span>User groups</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                        <span class="icon">
+                                            <i class="fa-solid fa-user-group"></i>
+                                        </span>
+                                    <span>Users</span>
+                                </a>
+                            </li>
+                        </ul>
 
+                    </div>
+                    <div>
+                        <section class="tab-content">
+                            <article class="message">
+                                <div class="message-body">
+                                    You can select one or many user group, just hold <em>CTRL</em> and select. To apply, click on Save Changes button.
+                                </div>
+                            </article>
+                            <div class="container">
+                                <div class="columns is-centered">
+                                    <div class="column is-10">
+                                        <div class="select is-multiple is-fullwidth">
+                                            <select multiple size="8">
+                                                <option value="Argentina">Argentina</option>
+                                                <option value="Bolivia">Bolivia</option>
+                                                <option value="Brazil">Brazil</option>
+                                                <option value="Chile">Chile</option>
+                                                <option value="Colombia">Colombia</option>
+                                                <option value="Ecuador">Ecuador</option>
+                                                <option value="Guyana">Guyana</option>
+                                                <option value="Paraguay">Paraguay</option>
+                                                <option value="Peru">Peru</option>
+                                                <option value="Suriname">Suriname</option>
+                                                <option value="Uruguay">Uruguay</option>
+                                                <option value="Venezuela">Venezuela</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="tab-content">
+                            <div class="control has-icons-left is-half">
+                                <input class="input is-primary" type="text" placeholder="Search">
+                                <span class="icon is-left">
+                                    <i class="fas fa-search" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success">Save changes</button>
+                <button class="button">Cancel</button>
+            </footer>
+        </div>
+    </div>
+
+    <div id="send-file-confirmation" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title is-warning">Confirmation</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                Are you sure to send those elements? <br />
+                If you want click on Send button or cancel request.
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success">
+                        <span class="icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </span>
+                    <span>Send</span>
+                </button>
+                <button class="button">Cancel</button>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        bulmaTagsinput.attach();
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Functions to open and close a modal
+            function openModal($el) {
+                $el.classList.add('is-active');
+            }
+
+            function closeModal($el) {
+                $el.classList.remove('is-active');
+            }
+
+            function closeAllModals() {
+                (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+                    closeModal($modal);
+                });
+            }
+
+            // Add a click event on buttons to open a specific modal
+            (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+                const modal = $trigger.dataset.target;
+                const $target = document.getElementById(modal);
+                console.log($target);
+
+                $trigger.addEventListener('click', () => {
+                    openModal($target);
+                });
+            });
+
+            // Add a click event on various child elements to close the parent modal
+            (document.querySelectorAll(' .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+                const $target = $close.closest('.modal');
+
+                $close.addEventListener('click', () => {
+                    closeModal($target);
+                });
+            });
+
+            // Add a keyboard event to close all modals
+            document.addEventListener('keydown', (event) => {
+                const e = event || window.event;
+
+                if (e.keyCode === 27) { // Escape key
+                    closeAllModals();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
