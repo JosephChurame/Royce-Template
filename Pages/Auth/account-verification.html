@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My first Bulma website</title>
+    <title>Confirm the verification code</title>
     <link rel="stylesheet" href="../../node_modules/bulma/css/bulma.min.css" />
     <link rel="stylesheet" href="../../node_modules/bulma-extensions/bulma-divider/dist/css/bulma-divider.min.css" />
     <link rel="stylesheet" href="../../node_modules/bulma-extensions/bulma-tagsinput/dist/css/bulma-tagsinput.min.css" />
@@ -14,42 +14,139 @@
     <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/brands.css" />
     <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/solid.css" />
     <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/regular.css" />
+
+    <script>
+        //set minutes
+        var mins = 20;
+
+        //calculate the seconds
+        var secs = mins * 60;
+
+        //countdown function is evoked when page is loaded
+        function countdown() {
+            setTimeout('Decrement()', 60);
+        }
+
+        //Decrement function decrement the value.
+        function Decrement() {
+            if (document.getElementById) {
+                minutes = document.getElementById("minutes");
+                seconds = document.getElementById("seconds");
+
+                timer = document.getElementById('timer')
+
+                //if less than a minute remaining
+                //Display only seconds value.
+                if (seconds < 59) {
+                    seconds.value = secs;
+                }
+
+                    //Display both minutes and seconds
+                    //getminutes and getseconds is used to
+                //get minutes and seconds
+                else {
+                    minutes.innerHTML = getminutes();
+                    seconds.innerHTML = getseconds();
+                }
+                //when less than a minute remaining
+                //colour of the minutes and seconds
+                //changes to red
+                if (mins < 1) {
+                    minutes.style.color = "red";
+                    seconds.style.color = "red";
+                }
+                //if seconds becomes zero,
+                //then page alert time up
+                if (mins < 0) {
+                    alert('time up');
+                    minutes.innerHTML = 0;
+                    seconds.innerHTML = 0;
+                }
+                //if seconds > 0 then seconds is decremented
+                else {
+                    secs--;
+                    setTimeout('Decrement()', 1000);
+                }
+
+                timer.setAttribute('datetime', `${getminutes()}:${getseconds()}`)
+            }
+        }
+
+        function getminutes() {
+            //minutes is seconds divided by 60, rounded down
+            mins = Math.floor(secs / 60);
+            return mins;
+        }
+
+        function getseconds() {
+            //take minutes remaining (as seconds) away
+            //from total seconds remaining
+            return secs - Math.round(mins * 60);
+        }
+    </script>
 </head>
 
-<body>
-    <div class="container" style="width: 20rem; margin-top: 70px">
-        <form class="box">
-            <article class="message is-link">
-                <div class="message-body">
-                    Enter the code you received below.
-                    <strong> Otp code expires after 20minutes</strong>
-                </div>
-            </article>
-            <div class="field">
-                <label class="label">Code</label>
-                <div class="control has-icons-left">
-                    <input class="input" type="text" placeholder="12hfgs7QW" />
-                    <span class="icon is-small is-left">
-                        <i class="fa-solid fa-key"></i> </span>
-                </div>
-                <div class="columns py-3 is-variable is-4">
-                    <div class="column">
-                        <p class="help">Otp Code</p>
-                    </div>
-                    <div class="column">
-                        <p class="control">
-                            <a class="button is-link is-small"> Resend Code </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
+<body onload="countdown();">
+    <div class="columns is-centered my-6">
+        <div class="column is-one-quarter">
+            <form class="box">
+                <h3 class="title is-3">Code confirmation</h3>
+                <div class="is-divider mb-1 mt-4"></div>
 
-            <div class="field is-grouped is-grouped-centered py-4">
-                <p class="control">
-                    <a class="button is-primary"> Verify </a>
-                </p>
-            </div>
-        </form>
+                <article class="message is-warning is-small">
+                    <div class="message-header">
+                        <p>
+                            <span class="icon">
+                                <i class="fa-solid fa-circle-question"></i>
+                            </span>
+                            <span>Warning</span>
+                        </p>
+                        <button class="delete" aria-label="delete"></button>
+                    </div>
+                    <div class="message-body">
+                        You must enter the <strong>8-digit</strong> code that you received either by e-mail or by sms.
+                        This code will <strong>expire in 20 minutes</strong> after which you will have to try again. If you have not
+                        received the code, click on the resend code button.
+                    </div>
+                </article>
+
+                <div class="field">
+                    <label class="label">Code</label>
+                    <div class="control has-icons-left">
+                        <input class="input" type="text" placeholder="eg: 12-35-87-90" />
+                        <span class="icon is-small is-left">
+                            <i class="fa-solid fa-key"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="columns py-3">
+                    <div class="column">
+                        <time class="button is-info is-small is-light" id="timer" datetime="20:00"><span id="minutes">00</span>: <span id="seconds">00</span> </time>
+                    </div>
+                    <div class="column">
+                        <div class="field is-grouped is-grouped-right">
+                            <p class="control">
+                                <a class="button is-link is-light is-small">
+                                <span class="icon">
+                                    <i class="fa-solid fa-sms"></i>
+                                </span>
+                                    <span>Resend code</span>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="control">
+                        <button class="button is-primary is-fullwidth">
+                            Verify
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 

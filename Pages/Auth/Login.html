@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My first Bulma website</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../../node_modules/bulma/css/bulma.min.css" />
     <link rel="stylesheet" href="../../node_modules/bulma-extensions/bulma-divider/dist/css/bulma-divider.min.css" />
     <link rel="stylesheet" href="../../node_modules/bulma-extensions/bulma-tagsinput/dist/css/bulma-tagsinput.min.css" />
@@ -21,6 +21,8 @@
     <div class="container " style="width: 20rem; margin-top:70px">
         <form class="box" style="margin: auto;">
             <h5 class="title  is-center has-text-centered">Login</h5>
+            <div class="is-divider mb-1"></div>
+
             <div class="field">
                 <label class="label">Username</label>
                 <div class="control has-icons-left">
@@ -37,7 +39,7 @@
                 <div class="control has-icons-left">
                     <input class="input is-normal " type="text" placeholder="e.g. CYK123Y">
                     <span class="icon is-small is-left">
-                        <i class="fa-solid fa-id-badge"></i>
+                        <i class="fa-solid fa-hashtag"></i>
                     </span>
                 </div>
             </div>
@@ -60,7 +62,14 @@
                 </p>
             </div>
 
-            <a class="is-underlined">Forgot Password?</a>
+            <div class="content is-small">
+                <a href="account-verification-method.html" class="is-link">
+                    <span class="icon">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </span>
+                    <span>Forgot Password?</span>
+                </a>
+            </div>
         </form>
     </div>
 </body>
