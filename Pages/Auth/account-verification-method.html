@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My first Bulma website</title>
+    <title>Verification methods</title>
     <link rel="stylesheet" href="../../node_modules/bulma/css/bulma.min.css" />
     <link rel="stylesheet" href="../../node_modules/bulma-extensions/bulma-divider/dist/css/bulma-divider.min.css" />
     <link rel="stylesheet" href="../../node_modules/bulma-extensions/bulma-tagsinput/dist/css/bulma-tagsinput.min.css" />
@@ -18,50 +18,86 @@
 </head>
 
 <body>
-    <div class="container " style="width: 60%; margin-top:70px">
-        <div class="columns .is-variable is-8">
-            <div class="column" >
-                <div class="card">
-                    <header class="card-header">
-                        <p class="card-header-title">
-                            Email Verification
-                        </p>
-                        <button class="card-header-icon" aria-label="more options">
-                            <span class="icon is-large" style="color: blue;">
-                                <i class="fa-solid fa-envelope"></i>
-                            </span>
-                        </button>
-                    </header>
-                    <div class="card-content">
-                        <div class="content">
-                            <p>The email account used during registration would be used to send a code for verfification</p>
+    <div class="container my-6">
+        <div class="container mx-2">
+            <h2 class="title is-2">Verification Method</h2>
+            <p class="subtitle is-4">Choose verification method</p>
+        </div>
+        <div class="is-divider"></div>
+
+        <div class="columns is-centered ">
+            <div class="column is-10-desktop">
+
+                <div class="columns is-variable is-8 mx-4">
+
+                    <div class="column is-6-tablet">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="../../images/email-verification-2.webp" alt="Image verification">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Email verification</p>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    The email account used during registration would be used to send a code for verification.
+                                </div>
+                                <div class="field is-grouped is-grouped-right">
+                                    <p class="control">
+                                        <a class="button is-primary is-small is-light px-4">
+                                            <span>Go</span>
+                                            <span class="icon">
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </span>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <footer class="card-footer">
-                        <a href="#" class="button is-primary is-outlined card-footer-item">Email Verification</a>
-                    </footer>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <header class="card-header">
-                        <p class="card-header-title is-center">
-                            Phone Verification
-                        </p>
-                        <button class="card-header-icon" aria-label="more options">
-                            <span class="icon is-large">
-                            <i class="fa-solid fa-phone" style="color: blue;"></i>
-                            </span>
-                        </button>
-                    </header>
-                    <div class="card-content">
-                        <div class="content">
-                            <p>The phone number used during registration would be used to send a code for verificaition</p>
+
+                    <div class="column is-half-tablet">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="../../images/phone-verification.jpg" alt="Sms verification">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <i class="fa-solid fa-sms"></i>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">SMS verification</p>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    The phone number used during registration would be used to send a <em>code</em> by <strong>SMS</strong> for verification.
+                                </div>
+
+                                <div class="field is-grouped is-grouped-right">
+                                    <p class="control">
+                                        <a class="button is-primary is-small is-light px-4">
+                                            <span>Go</span>
+                                            <span class="icon">
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </span>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <footer class="card-footer">
-                        <a href="#" class="button is-primary is-outlined card-footer-item">Phone Verification</a>
-                    </footer>
                 </div>
             </div>
         </div>
