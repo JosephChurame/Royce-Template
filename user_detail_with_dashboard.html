@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Bulma Dashboard example
+  </title>
+  <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
+  <link rel="stylesheet" href="node_modules/bulma-extensions/bulma-divider/dist/css/bulma-divider.min.css">
+  <link rel="stylesheet" href="node_modules/bulma-extensions/bulma-tagsinput/dist/css/bulma-tagsinput.min.css">
+  <link rel="stylesheet" href="node_modules/bulma-extensions/bulma-checkradio/dist/css/bulma-checkradio.min.css">
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.css">
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/brands.css">
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/solid.css">
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/regular.css">
+  <link rel="stylesheet" href="node_modules/bulma-extensions/bulma-accordion/dist/css/bulma-accordion.min.css">
+  <link rel="stylesheet" href="node_modules/bulma-dashboard/dist/bulma-dashboard.min.css">
+
+  <script src="node_modules/bulma-extensions/bulma-accordion/dist/js/bulma-accordion.min.js"></script>
+</head>
+<body>
+<div class="dashboard is-full-height">
+  <!-- left panel -->
+  <div class="dashboard-panel is-medium has-thick-padding has-background-grey-lighter is-hidden-mobile">
+    <header class="dashboard-panel-header">
+      <div class="has-text-centered">
+        <img src="https://bulma.io/images/bulma-logo.png  " width="50%">
+      </div>
+    </header>
+
+    <div class="dashboard-panel-content">
+      <aside class="menu has-text-white">
+        <p class="menu-label">
+          General
+        </p>
+        <ul class="menu-list">
+          <li><a>Dashboard</a></li>
+          <li><a>Customers</a></li>
+        </ul>
+        <p class="menu-label">
+          Administration
+        </p>
+        <ul class="menu-list">
+          <li><a>Team Settings</a></li>
+          <li>
+            <a class="is-active">Manage Your Team</a>
+            <ul>
+              <li><a>Members</a></li>
+              <li><a>Plugins</a></li>
+              <li><a>Add a member</a></li>
+            </ul>
+          </li>
+          <li><a>Invitations</a></li>
+          <li><a>Cloud Storage Environment Settings</a></li>
+          <li><a>Authentication</a></li>
+        </ul>
+        <p class="menu-label">
+          Transactions
+        </p>
+        <ul class="menu-list">
+          <li><a>Payments</a></li>
+          <li><a>Transfers</a></li>
+          <li><a>Balance</a></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+
+  <!-- main section -->
+  <div class="dashboard-main is-scrollable">
+    <nav class="navbar is-fixed-top is-dark">
+      <div class="navbar-menu">
+        <div class="navbar-end">
+              <span class="navbar-item">
+                Fixed-top navbar
+              </span>
+        </div>
+      </div>
+    </nav>
+
+    <section class="section">
+      <div class="container my-5">
+        <h2 class="title is-2">User details</h2>
+        <p class="subtitle is-4">@Royce123 informations</p>
+        <div class="is-divider"></div>
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              <div class="columns">
+                <div class="column">
+                  <div class="field is-horizontal">
+                    <div class="field-label">
+                      <label class="label" style="min-width: 150px;">Username:</label>
+                    </div>
+                    <div class="field-body">Royce123</div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label">
+                      <label class="label" style="min-width: 150px;">First name:</label>
+                    </div>
+                    <div class="field-body">Mbah</div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label">
+                      <label class="label" style="min-width: 150px;">Last name:</label>
+                    </div>
+                    <div class="field-body">Royce</div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label">
+                      <label class="label" style="min-width: 150px;">Gender:</label>
+                    </div>
+                    <div class="field-body">Male</div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label">
+                      <label class="label" style="min-width: 150px;">Date of Birth:</label>
+                    </div>
+                    <div class="field-body">06-08-2000</div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="field is-horizontal">
+                    <div class="field-label">
+                      <label class="label" style="min-width: 150px;">Email:</label>
+                    </div>
+                    <div class="field-body">jc@gmail.com</div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label">
+                      <label class="label" style="min-width: 150px;">Address:</label>
+                    </div>
+                    <div class="field-body">Nziou - kribi</div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label">
+                      <label class="label" style="min-width: 150px;">Phone number:</label>
+                    </div>
+                    <div class="field-body">+237 657554748</div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label">
+                      <label class="label" style="min-width: 150px;">Matricule:</label>
+                    </div>
+                    <div class="field-body">CUK-5888K</div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label">
+                      <label class="label" style="min-width: 150px;">Designation:</label>
+                    </div>
+                    <div class="field-body">Communal agent</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="is-divider" data-content="Permission Management"></div>
+
+              <section class="accordions mx-4">
+                <article class="accordion is-active">
+                  <div class="accordion-header toggle">
+                    <p>
+                      <span class="icon"><i class="fa-solid fa-people-group"></i></span>
+                      <span>User group</span>
+                    </p>
+                  </div>
+                  <div class="accordion-body">
+                    <div class="accordion-content">
+                      <div class="field is-horizontal">
+                        <div class="field-label">
+                          <label class="label" style="min-width: 150px;">User group:</label>
+                        </div>
+                        <div class="field-body">Information cell</div>
+                      </div>
+
+                      <div class="field is-horizontal">
+                        <div class="field-label">
+                          <label class="label" style="min-width: 150px;">Parent group:</label>
+                        </div>
+                        <div class="field-body">--</div>
+                      </div>
+
+                      <div class="field is-horizontal">
+                        <div class="field-label">
+                          <label class="label" style="min-width: 150px;">User Role:</label>
+                        </div>
+                        <div class="field-body">Communal agent</div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="accordion is-active">
+                  <div class="accordion-header">
+                    <p>
+                      <span class="icon"><i class="fa-solid fa-user-lock"></i></span>
+                      <span>User permissions</span>
+                    </p>
+                    <button class="toggle" aria-label="toggle"></button>
+                  </div>
+                  <div class="accordion-body">
+                    <div class="accordion-content">
+                      <div class="accordion-content">
+                        <input class="is-checkradio is-disabled" id="create-user-permission" type="checkbox" name="create-user-permission" disabled>
+                        <label for="create-user-permission">Create User</label>
+                        <input class="is-checkradio is-disabled" id="update-user-info-permission" type="checkbox" name="update-user-info-permission" disabled>
+                        <label for="update-user-info-permission">Update User Information</label>
+                        <input class="is-checkradio is-disabled" id="delete-user-permission" type="checkbox" name="delete-user-permission" disabled>
+                        <label for="delete-user-permission">Delete User</label>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="accordion is-active">
+                  <div class="accordion-header">
+                    <p>
+                      <span class="icon"><i class="fa-solid fa-message"></i></span>
+                      <span>Message permissions</span>
+                    </p>
+                    <button class="toggle" aria-label="toggle"></button>
+                  </div>
+                  <div class="accordion-body">
+                    <div class="accordion-content">
+                      <div class="field">
+                        <input class="is-checkradio is-disabled" id="receive-message-permission" type="checkbox" name="receive-message-permission" disabled>
+                        <label for="receive-message-permission">Receive Messages</label>
+                        <input class="is-checkradio is-disabled" id="send-message-permission" type="checkbox" name="send-message-permission" disabled>
+                        <label for="send-message-permission">Send Messages</label>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="accordion">
+                  <div class="accordion-header">
+                    <p>
+                      <span class="icon"><i class="fa-solid fa-bell"></i></span>
+                      <span>Notification Permissions</span>
+                    </p>
+                    <button class="toggle" aria-label="toggle"></button>
+                  </div>
+                  <div class="accordion-body">
+                    <div class="accordion-content">
+                      <div class="field">
+                        <input class="is-checkradio is-disabled" id="receive-notification-permission" type="checkbox" name="receive-notification-permission" disabled>
+                        <label for="receive-notification-permission">Receive Notifications</label>
+                        <input class="is-checkradio is-disabled" id="send-notification-permission" type="checkbox" name="send-notification-permission" disabled>
+                        <label for="send-notification-permission">Send Notifications</label>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="accordion">
+                  <div class="accordion-header">
+                    <p>
+                      <span class="icon"><i class="fa-solid fa-arrow-right-arrow-left"></i></span>
+                      <span>File Management Permissions</span>
+                    </p>
+                    <button class="toggle" aria-label="toggle"></button>
+                  </div>
+                  <div class="accordion-body">
+                    <div class="accordion-content">
+                      <div class="field">
+                        <input class="is-checkradio is-disabled" id="receive-file-permission" type="checkbox" name="receive-file-permission" disabled>
+                        <label for="receive-file-permission">Receive Files</label>
+                        <input class="is-checkradio is-disabled" id="send-file-permission" type="checkbox" name="send-file-permission" disabled>
+                        <label for="send-file-permission">Send Files</label>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </section>
+            </div>
+            <div class="column is-4">
+              <div class="container mx-4">
+                <h4 class="title is-4">Image profile</h4>
+
+                <div class="card mt-4">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img src="images/profile.jpg" alt="Image profile">
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <div class="media">
+                      <div class="media-left">
+                                            <span class="icon is-large">
+                                                <i class="fa-solid fa-image-portrait"></i>
+                                            </span>
+                      </div>
+                      <div class="media-content">
+                        <p>Updated at: <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time></p>
+                        <div class="content is-small">size: 458 kb</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="button is-danger is-fullwidth mt-4">
+                  <span class="icon"><i class="fa-solid fa-edit"></i></span>
+                  <span>Edit profile</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- the footer will take up all unused space at the bottom -->
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+          is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- right panel -->
+  <div class="dashboard-panel is-small has-background-light is-scrollable">
+    <p class="is-size-4 has-text-weight-light">
+      Table of contents
+    </p>
+
+    <hr class="has-background-grey" />
+
+    <a class="is-size-4">
+      Introduction
+    </a>
+    <br />
+    <a class="is-size-4">
+      Overview
+    </a>
+    <br />
+    <a class="is-size-4">
+      Getting started
+    </a>
+    <br />
+    <a class="is-size-4">
+      Introduction
+    </a>
+    <br />
+    <a class="is-size-4">
+      Overview
+    </a>
+    <br />
+    <a class="is-size-4">
+      Getting started
+    </a>
+    <br />
+    <a class="is-size-4">
+      Introduction
+    </a>
+    <br />
+    <a class="is-size-4">
+      Overview
+    </a>
+    <br />
+    <a class="is-size-4">
+      Getting started
+    </a>
+    <br />
+    <a class="is-size-4">
+      Introduction
+    </a>
+    <br />
+    <a class="is-size-4">
+      Overview
+    </a>
+    <br />
+    <a class="is-size-4">
+      Getting started
+    </a>
+    <br />
+    <a class="is-size-4">
+      Introduction
+    </a>
+    <br />
+    <a class="is-size-4">
+      Overview
+    </a>
+    <br />
+    <a class="is-size-4">
+      Getting started
+    </a>
+    <br />
+    <a class="is-size-4">
+      Introduction
+    </a>
+    <br />
+    <a class="is-size-4">
+      Overview
+    </a>
+    <br />
+    <a class="is-size-4">
+      Getting started
+    </a>
+    <br />
+    <a class="is-size-4">
+      Introduction
+    </a>
+    <br />
+    <a class="is-size-4">
+      Overview
+    </a>
+    <br />
+    <a class="is-size-4">
+      Getting started
+    </a>
+    <br />
+  </div>
+</div>
+<script>
+  var accordions = bulmaAccordion.attach();
+</script>
+</body>
+</html>
