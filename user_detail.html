@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="node_modules/bulma-extensions/bulma-accordion/dist/css/bulma-accordion.min.css">
 
     <script src="node_modules/bulma-extensions/bulma-tagsinput/dist/js/bulma-tagsinput.min.js"></script>
+    <script src="node_modules/bulma-extensions/bulma-accordion/dist/js/bulma-accordion.min.js"></script>
+
     <style>
         div.input[type="tags"]>* {
             border: transparent !important;
@@ -91,12 +93,90 @@
                                 </div>
                                 <div class="field-body">+237 657554748</div>
                             </div>
-                        </div>
 
+                            <div class="field is-horizontal">
+                                <div class="field-label">
+                                    <label class="label" style="min-width: 150px;">Matricule:</label>
+                                </div>
+                                <div class="field-body">CUK-5888K</div>
+                            </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-label">
+                                    <label class="label" style="min-width: 150px;">Designation:</label>
+                                </div>
+                                <div class="field-body">Communal agent</div>
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="is-divider" data-content="Permission Management"></div>
+
+                    <section class="accordions mx-4">
+                        <article class="accordion is-active">
+                            <div class="accordion-header toggle">
+                                <p>
+                                    <span class="icon"><i class="fa-solid fa-people-group"></i></span>
+                                    <span>User group</span>
+                                </p>
+                            </div>
+                            <div class="accordion-body">
+                                <div class="accordion-content">
+                                    <div class="field is-horizontal">
+                                        <div class="field-label">
+                                            <label class="label" style="min-width: 150px;">User group:</label>
+                                        </div>
+                                        <div class="field-body">Information cell</div>
+                                    </div>
+
+                                    <div class="field is-horizontal">
+                                        <div class="field-label">
+                                            <label class="label" style="min-width: 150px;">Parent group:</label>
+                                        </div>
+                                        <div class="field-body">--</div>
+                                    </div>
+
+                                    <div class="field is-horizontal">
+                                        <div class="field-label">
+                                            <label class="label" style="min-width: 150px;">User Role:</label>
+                                        </div>
+                                        <div class="field-body">Communal agent</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="accordion is-active">
+                            <div class="accordion-header">
+                                <p>
+                                    <span class="icon"><i class="fa-solid fa-user-lock"></i></span>
+                                    <span>User permissions</span>
+                                </p>
+                                <button class="toggle" aria-label="toggle"></button>
+                            </div>
+                            <div class="accordion-body">
+                                <div class="accordion-content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                                </div>
+                            </div>
+                        </article>
+                        <article class="accordion">
+                            <div class="accordion-header">
+                                <p>
+                                    <span class="icon"><i class="fa-solid fa-arrow-right-arrow-left"></i></span>
+                                    <span>Communication permissions</span>
+                                </p>
+                                <button class="toggle" aria-label="toggle"></button>
+                            </div>
+                            <div class="accordion-body">
+                                <div class="accordion-content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                                </div>
+                            </div>
+                        </article>
+                    </section>
                 </div>
                 <div class="column is-4">
-                    <div class="container">
+                    <div class="container mx-4">
                         <h4 class="title is-4">Image profile</h4>
 
                         <div class="card mt-4">
@@ -113,18 +193,25 @@
                                             </span>
                                     </div>
                                     <div class="media-content">
-                                        <p class="subtitle is-normal">size: 45865 kb</p>
                                         <p>Updated at: <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time></p>
+                                        <div class="content is-small">size: 458 kb</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <a class="button is-danger is-fullwidth mt-4">
+                            <span class="icon"><i class="fa-solid fa-edit"></i></span>
+                            <span>Edit profile</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
+
+    <script>
+        var accordions = bulmaAccordion.attach();
+    </script>
 </body>
 
 </html>
