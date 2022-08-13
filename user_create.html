@@ -19,8 +19,17 @@
     <script src="node_modules/bulma-extensions/bulma-tagsinput/dist/js/bulma-tagsinput.min.js"></script>
     <script src="node_modules/bulma-extensions/bulma-accordion/dist/js/bulma-accordion.min.js"></script>
     <style>
-        div.input[type="tags"]>* {
-            border: transparent !important;
+        .tabs-with-content .tabs:not(:last-child) {
+            margin-bottom: 0;
+        }
+
+        .tabs-with-content .tab-content {
+            padding: 1rem;
+            display: none;
+        }
+
+        .tabs-with-content .tab-content.is-active {
+            display: block;
         }
     </style>
 
@@ -185,7 +194,10 @@
                                     <div class="control">
                                         <input class="input" type="text" placeholder="ex: HN2328C ...">
                                     </div>
-                                    <p class="help is-info">This is a help text</p>
+                                    <p class="help is-info">
+                                        <span class="icon"><i class="fa-solid fa-circle-question"></i></span>
+                                        <span>The matricule designates the unique number of the structure for which the user works.</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -199,9 +211,6 @@
                                     <div class="control">
                                         <input class="input" type="text" placeholder="e.g. Communal agent ...">
                                     </div>
-                                    <p class="help is-danger">
-                                        This field is required
-                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -240,7 +249,8 @@
                                         <a class="button is-primary js-modal-trigger" data-target="modal-account-setter">Set up state</a>
                                     </div>
                                     <p class="help is-info">
-                                        This option will determine how the user can access the platform.
+                                        <span class="icon"><i class="fa-solid fa-circle-question"></i></span>
+                                        <span>This option will determine how the user can access the platform.</span>
                                     </p>
                                 </div>
                             </div>
@@ -254,8 +264,9 @@
                                     <div class="control">
                                         <a class="button is-primary js-modal-trigger" data-target="modal-permssions-setter">Set up permissions</a>
                                     </div>
-                                    <p class="help is-warning">
-                                        This option will determine the user's access rights.
+                                    <p class="help is-info">
+                                        <span class="icon"><i class="fa-solid fa-circle-question"></i></span>
+                                        <span>This option will determine how the user can access the platform.</span>
                                     </p>
                                 </div>
                             </div>
@@ -491,88 +502,145 @@
             </header>
             <section class="modal-card-body">
                 <!-- Content ... -->
-                <section class="accordions">
-                    <article class="accordion is-active">
-                        <div class="accordion-header toggle">
-                            <p>Messaging Permission</p>
-                        </div>
-                        <div class="accordion-body">
-                            <div class="accordion-content">
-                                <div class="field">
-                                    <input class="is-checkradio" id="receive-message-permission" type="checkbox" name="receive-message-permission">
-                                    <label for="receive-message-permission">Receive Messages</label>
-                                    <input class="is-checkradio" id="send-message-permission" type="checkbox" name="send-message-permission">
-                                    <label for="send-message-permission">Send Messages</label>
+                <div class="tabs-with-content">
+                    <div class="tabs is-boxed">
+                        <ul>
+                            <li class="is-active">
+                                <a>
+                                    <span class="icon">
+                                        <i class="fa-solid fa-people-group"></i>
+                                    </span>
+                                    <span>User groups</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <span class="icon">
+                                        <i class="fa-solid fa-user-lock"></i>
+                                    </span>
+                                    <span>Specific permissions</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div>
+                        <section class="tab-content">
+                            <article class="message">
+                                <div class="message-body">
+                                    The choice of user group will affect the access rights of the new user.
+                                </div>
+                            </article>
+                            <div class="container">
+                                <div class="columns is-centered">
+                                    <div class="column is-10">
+                                        <div class="select is-multiple is-fullwidth">
+                                            <select size="8" style="min-height: 200px;">
+                                                <option value="Argentina">Argentina</option>
+                                                <option value="Bolivia">Bolivia</option>
+                                                <option value="Brazil">Brazil</option>
+                                                <option value="Chile">Chile</option>
+                                                <option value="Colombia">Colombia</option>
+                                                <option value="Ecuador">Ecuador</option>
+                                                <option value="Guyana">Guyana</option>
+                                                <option value="Paraguay">Paraguay</option>
+                                                <option value="Peru">Peru</option>
+                                                <option value="Suriname">Suriname</option>
+                                                <option value="Uruguay">Uruguay</option>
+                                                <option value="Venezuela">Venezuela</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </article>
+                        </section>
+                        <section class="tab-content">
+                            <section class="accordions">
+                                <article class="accordion is-active">
+                                    <div class="accordion-header toggle">
+                                        <p>Messaging Permission</p>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="accordion-content">
+                                            <div class="field">
+                                                <input class="is-checkradio" id="receive-message-permission" type="checkbox" name="receive-message-permission">
+                                                <label for="receive-message-permission">Receive Messages</label>
+                                                <input class="is-checkradio" id="send-message-permission" type="checkbox" name="send-message-permission">
+                                                <label for="send-message-permission">Send Messages</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
 
-                    <article class="accordion">
-                        <div class="accordion-header">
-                            <p>Notification Permissions</p>
-                            <button class="toggle" aria-label="toggle"></button>
-                        </div>
-                        <div class="accordion-body">
-                            <div class="accordion-content">
-                                <div class="field">
-                                    <input class="is-checkradio" id="receive-notification-permission" type="checkbox" name="receive-notification-permission">
-                                    <label for="receive-notification-permission">Receive Notifications</label>
-                                    <input class="is-checkradio" id="send-notification-permission" type="checkbox" name="send-notification-permission">
-                                    <label for="send-notification-permission">Send Notifications</label>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+                                <article class="accordion">
+                                    <div class="accordion-header">
+                                        <p>Notification Permissions</p>
+                                        <button class="toggle" aria-label="toggle"></button>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="accordion-content">
+                                            <div class="field">
+                                                <input class="is-checkradio" id="receive-notification-permission" type="checkbox" name="receive-notification-permission">
+                                                <label for="receive-notification-permission">Receive Notifications</label>
+                                                <input class="is-checkradio" id="send-notification-permission" type="checkbox" name="send-notification-permission">
+                                                <label for="send-notification-permission">Send Notifications</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
 
-                    <article class="accordion">
-                        <div class="accordion-header">
-                            <p>File Management Permissions</p>
-                            <button class="toggle" aria-label="toggle"></button>
-                        </div>
-                        <div class="accordion-body">
-                            <div class="accordion-content">
-                                <div class="field">
-                                    <input class="is-checkradio" id="receive-file-permission" type="checkbox" name="receive-file-permission">
-                                    <label for="receive-file-permission">Receive Files</label>
-                                    <input class="is-checkradio" id="send-file-permission" type="checkbox" name="send-file-permission">
-                                    <label for="send-file-permission">Send Files</label>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+                                <article class="accordion">
+                                    <div class="accordion-header">
+                                        <p>File Management Permissions</p>
+                                        <button class="toggle" aria-label="toggle"></button>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="accordion-content">
+                                            <div class="field">
+                                                <input class="is-checkradio" id="receive-file-permission" type="checkbox" name="receive-file-permission">
+                                                <label for="receive-file-permission">Receive Files</label>
+                                                <input class="is-checkradio" id="send-file-permission" type="checkbox" name="send-file-permission">
+                                                <label for="send-file-permission">Send Files</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
 
-                    <article class="accordion">
-                        <div class="accordion-header">
-                            <p>Call Permissions</p>
-                            <button class="toggle" aria-label="toggle"></button>
-                        </div>
-                        <div class="accordion-body">
-                            <div class="accordion-content">
-                                <input class="is-checkradio" id="receive-call-permission" type="checkbox" name="receive-call-permission">
-                                <label for="receive-call-permission">Receive Calls</label>
-                                <input class="is-checkradio" id="make-call-permission" type="checkbox" name="make-call-permission">
-                                <label for="make-call-permission">Make Calls</label>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="accordion">
-                        <div class="accordion-header">
-                            <p>User Management Permissions</p>
-                            <button class="toggle" aria-label="toggle"></button>
-                        </div>
-                        <div class="accordion-body">
-                            <div class="accordion-content">
-                                <input class="is-checkradio" id="create-user-permission" type="checkbox" name="create-user-permission">
-                                <label for="create-user-permission">Create User</label>
-                                <input class="is-checkradio" id="update-user-info-permission" type="checkbox" name="update-user-info-permission">
-                                <label for="update-user-info-permission">Update User Information</label>
-                                <input class="is-checkradio" id="delete-user-permission" type="checkbox" name="delete-user-permission">
-                                <label for="delete-user-permission">Delete User</label>
-                            </div>
-                        </div>
-                    </article>
-                </section>
+                                <article class="accordion">
+                                    <div class="accordion-header">
+                                        <p>Call Permissions</p>
+                                        <button class="toggle" aria-label="toggle"></button>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="accordion-content">
+                                            <input class="is-checkradio" id="receive-call-permission" type="checkbox" name="receive-call-permission">
+                                            <label for="receive-call-permission">Receive Calls</label>
+                                            <input class="is-checkradio" id="make-call-permission" type="checkbox" name="make-call-permission">
+                                            <label for="make-call-permission">Make Calls</label>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="accordion">
+                                    <div class="accordion-header">
+                                        <p>User Management Permissions</p>
+                                        <button class="toggle" aria-label="toggle"></button>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="accordion-content">
+                                            <input class="is-checkradio" id="create-user-permission" type="checkbox" name="create-user-permission">
+                                            <label for="create-user-permission">Create User</label>
+                                            <input class="is-checkradio" id="update-user-info-permission" type="checkbox" name="update-user-info-permission">
+                                            <label for="update-user-info-permission">Update User Information</label>
+                                            <input class="is-checkradio" id="delete-user-permission" type="checkbox" name="delete-user-permission">
+                                            <label for="delete-user-permission">Delete User</label>
+                                        </div>
+                                    </div>
+                                </article>
+                            </section>
+                        </section>
+                    </div>
+                </div>
+
             </section>
             <footer class="modal-card-foot">
                 <button class="button is-success">
@@ -642,6 +710,50 @@
                 }
             });
         });
+    </script>
+
+    <script>
+        let tabsWithContent = (function () {
+            let tabs = document.querySelectorAll('.tabs li');
+            let tabsContent = document.querySelectorAll('.tab-content');
+
+            let deactvateAllTabs = function () {
+                tabs.forEach(function (tab) {
+                    tab.classList.remove('is-active');
+                });
+            };
+
+            let hideTabsContent = function () {
+                tabsContent.forEach(function (tabContent) {
+                    tabContent.classList.remove('is-active');
+                });
+            };
+
+            let activateTabsContent = function (tab) {
+                tabsContent[getIndex(tab)].classList.add('is-active');
+            };
+
+            let getIndex = function (el) {
+                return [...el.parentElement.children].indexOf(el);
+            };
+
+            tabs.forEach(function (tab) {
+                tab.addEventListener('click', function () {
+                    deactvateAllTabs();
+                    hideTabsContent();
+                    tab.classList.add('is-active');
+                    activateTabsContent(tab);
+                });
+            })
+
+            tabs[0].click();
+        })();
+
+        //message
+        const message = document.querySelector('.message');
+        message.addEventListener('click', () => {
+            message.classList.add('is-hidden')
+        })
     </script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script> -->
 
